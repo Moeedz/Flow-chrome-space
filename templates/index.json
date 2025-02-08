@@ -25,7 +25,7 @@
             "desktop-caption-heading-size": 80,
             "desktop-caption-body-text-size": 24,
             "text_position": "bottom",
-            "mobile_image": "shopify://shop_images/DSC01761.jpg",
+            "mobile_image": "shopify://shop_images/DSC01653.jpg",
             "mobile-caption-heading-size": 25,
             "mobile-caption-body-text-size": 14,
             "mobile_text_position": "bottom",
@@ -116,7 +116,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "color_scheme": "white",
+        "color_scheme": "light",
         "title": "",
         "description": "<h4><strong>Elevate your style</strong></h4>",
         "remove_spacing": true,
@@ -127,13 +127,13 @@
         "height_2": "3",
         "width_3": "3",
         "height_3": "3",
-        "width_4": "2",
-        "height_4": "2",
-        "width_5": "2",
-        "height_5": "2",
-        "width_6": "1",
-        "height_6": "4",
-        "block_alignment": "center"
+        "width_4": "3",
+        "height_4": "3",
+        "width_5": "3",
+        "height_5": "3",
+        "width_6": "3",
+        "height_6": "3",
+        "block_alignment": "flex-start"
       }
     },
     "image_gallery_q7K3eE": {
@@ -199,9 +199,9 @@
         "image_AhFRT8"
       ],
       "settings": {
-        "colors": "white",
+        "colors": "light",
         "title": "",
-        "richtext": "",
+        "richtext": "<h4><strong>EXPLORE ARE NEW COLLECTIONS</strong></h4>",
         "remove-spacing": true,
         "full-width": false,
         "section-width": "full",
