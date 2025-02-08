@@ -106,6 +106,9 @@
         "image_Wyijdd",
         "image_bxhXUT"
       ],
+      "custom_css": [
+        ".collage-builder__text-container--inner {border-radius: 50px !important;}"
+      ],
       "settings": {
         "color_scheme": "white",
         "title": "",
