@@ -59,9 +59,9 @@
             "desktop_position": "md-min-align-bottom md-min-justify-center",
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#262428",
-            "button_color": "#fff",
+            "button_color": "#ffffff",
             "button_background_color": "#e6e5e7",
-            "button_hover_color": "#fff",
+            "button_hover_color": "#ffffff",
             "button_hover_background_color": "#343434",
             "overlay_color": "rgba(0,0,0,0)"
           }
@@ -76,9 +76,9 @@
             "desktop_position": "md-min-align-bottom md-min-justify-right",
             "mobile_position": "md-max-align-bottom md-max-justify-right",
             "text_color": "#262428",
-            "button_color": "#E6E5E7",
+            "button_color": "#e6e5e7",
             "button_background_color": "#262428",
-            "button_hover_color": "#D4D3D4",
+            "button_hover_color": "#d4d3d4",
             "button_hover_background_color": "#494949",
             "overlay_color": "rgba(0,0,0,0)"
           }
@@ -93,9 +93,9 @@
             "desktop_position": "md-min-align-bottom md-min-justify-right",
             "mobile_position": "md-max-align-bottom md-max-justify-right",
             "text_color": "#262428",
-            "button_color": "#E6E5E7",
+            "button_color": "#e6e5e7",
             "button_background_color": "#262428",
-            "button_hover_color": "#D4D3D4",
+            "button_hover_color": "#d4d3d4",
             "button_hover_background_color": "#494949",
             "overlay_color": "rgba(0,0,0,0)"
           }
@@ -106,9 +106,7 @@
         "image_Wyijdd",
         "image_bxhXUT"
       ],
-      "custom_css": [
-        ".collage-builder__text-container--inner {border-radius: 50px !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "white",
         "title": "",
