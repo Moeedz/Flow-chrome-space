@@ -46,55 +46,90 @@
         "slide_transition_delay": 7
       }
     },
-    "collection_featured_collection_KeJQ8b": {
-      "type": "collection--featured-collection",
+    "collage_builder_RWzp3i": {
+      "type": "collage-builder",
       "blocks": {
-        "product_card_image_HNbYtE": {
-          "type": "product_card_image",
+        "image_EN7kbi": {
+          "type": "image",
           "settings": {
-            "enable_quick_shop": false,
-            "disable_quick_shop_mobile": true
+            "heading": "",
+            "heading_size": 8,
+            "button_label": "Shop now",
+            "url": "shopify://collections/all",
+            "desktop_position": "md-min-align-bottom md-min-justify-center",
+            "mobile_position": "md-max-align-bottom md-max-justify-center",
+            "text_color": "#262428",
+            "button_color": "#fff",
+            "button_background_color": "#e6e5e7",
+            "button_hover_color": "#fff",
+            "button_hover_background_color": "#343434",
+            "overlay_color": "rgba(0,0,0,0)"
           }
         },
-        "product_card_title_UMVYNx": {
-          "type": "product_card_title",
+        "image_Wyijdd": {
+          "type": "image",
           "settings": {
-            "product_card_title__font": "body"
+            "heading": "",
+            "heading_size": 8,
+            "button_label": "",
+            "url": "shopify://collections/all",
+            "desktop_position": "md-min-align-bottom md-min-justify-right",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#262428",
+            "button_color": "#E6E5E7",
+            "button_background_color": "#262428",
+            "button_hover_color": "#D4D3D4",
+            "button_hover_background_color": "#494949",
+            "overlay_color": "rgba(0,0,0,0)"
           }
         },
-        "product_card_price_DBXcbj": {
-          "type": "product_card_price",
-          "disabled": true,
+        "image_bxhXUT": {
+          "type": "image",
           "settings": {
-            "product_card_price__font": "body"
+            "heading": "",
+            "heading_size": 8,
+            "button_label": "",
+            "url": "shopify://collections/all",
+            "desktop_position": "md-min-align-bottom md-min-justify-right",
+            "mobile_position": "md-max-align-bottom md-max-justify-right",
+            "text_color": "#262428",
+            "button_color": "#E6E5E7",
+            "button_background_color": "#262428",
+            "button_hover_color": "#D4D3D4",
+            "button_hover_background_color": "#494949",
+            "overlay_color": "rgba(0,0,0,0)"
           }
-        },
-        "product_card_quick_shop_mXq7Pc": {
-          "type": "product_card_quick_shop",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
-        "product_card_image_HNbYtE",
-        "product_card_title_UMVYNx",
-        "product_card_price_DBXcbj",
-        "product_card_quick_shop_mXq7Pc"
+        "image_EN7kbi",
+        "image_Wyijdd",
+        "image_bxhXUT"
       ],
       "settings": {
-        "rows": 3,
-        "grid-desktop": 2,
-        "grid-mobile": "2",
-        "colors": "light",
+        "color_scheme": "white",
         "title": "",
-        "richtext": "",
-        "collection": "",
-        "show_view_all": false
+        "description": "<h4><strong>Elevate your style with our unique range</strong></h4>",
+        "remove_spacing": true,
+        "section_width": "full",
+        "width_1": "3",
+        "height_1": "3",
+        "width_2": "3",
+        "height_2": "3",
+        "width_3": "3",
+        "height_3": "3",
+        "width_4": "2",
+        "height_4": "2",
+        "width_5": "2",
+        "height_5": "2",
+        "width_6": "1",
+        "height_6": "4",
+        "block_alignment": "flex-end"
       }
     }
   },
   "order": [
     "image_slideshow_8ijpMy",
-    "collection_featured_collection_KeJQ8b"
+    "collage_builder_RWzp3i"
   ]
 }
