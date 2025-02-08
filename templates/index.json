@@ -17,7 +17,7 @@
           "settings": {
             "title": "",
             "text": "",
-            "first_button_label": "Shop now",
+            "first_button_label": "",
             "first_button_link": "shopify://collections/all",
             "second_button_label": "",
             "second_button_link": "",
@@ -66,7 +66,7 @@
             "button_color": "#ffffff",
             "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#ffffff",
-            "button_hover_background_color": "#343434",
+            "button_hover_background_color": "#000000",
             "overlay_color": "rgba(0,0,0,0)"
           }
         },
@@ -85,13 +85,15 @@
             "button_color": "#ffffff",
             "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#ffffff",
-            "button_hover_background_color": "#343434",
+            "button_hover_background_color": "#000000",
             "overlay_color": "rgba(0,0,0,0)"
           }
         },
         "image_bxhXUT": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/DSC01997.jpg",
+            "mobile_image": "shopify://shop_images/DSC01997.jpg",
             "heading": "",
             "heading_size": 8,
             "button_label": "Shop now",
@@ -100,9 +102,9 @@
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#262428",
             "button_color": "#ffffff",
-            "button_background_color": "#e6e5e7",
+            "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#e6e5e7",
-            "button_hover_background_color": "#343434",
+            "button_hover_background_color": "#000000",
             "overlay_color": "rgba(0,0,0,0)"
           }
         }
