@@ -12,37 +12,39 @@
     "image_slideshow_8ijpMy": {
       "type": "image--slideshow",
       "blocks": {
-        "image_UEbjkk": {
+        "image_HrBqYE": {
           "type": "image",
           "settings": {
             "title": "",
             "text": "",
-            "first_button_label": "",
-            "first_button_link": "",
+            "first_button_label": "Shop now",
+            "first_button_link": "shopify://collections/all",
             "second_button_label": "",
             "second_button_link": "",
+            "image": "shopify://shop_images/DSC01653.jpg",
             "desktop-caption-heading-size": 80,
             "desktop-caption-body-text-size": 24,
-            "text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
-            "mobile_text_position": "center_left",
+            "text_position": "bottom",
+            "mobile_image": "shopify://shop_images/DSC01761.jpg",
+            "mobile-caption-heading-size": 25,
+            "mobile-caption-body-text-size": 14,
+            "mobile_text_position": "bottom",
             "image_overlay": "#262428",
             "image_overlay_opacity": 0,
             "caption-text": "#242424",
             "button-text": "#ffffff",
             "button-background": "#242424",
-            "hover-button-background": "#9f9f9f"
+            "hover-button-background": "#9F9F9F"
           }
         }
       },
       "block_order": [
-        "image_UEbjkk"
+        "image_HrBqYE"
       ],
       "settings": {
         "desktop_height": "full_screen",
         "mobile_height": "extra_large",
-        "slide_navigation_style": "bars",
+        "slide_navigation_style": "arrows",
         "slide_transition_delay": 7
       }
     },
@@ -52,6 +54,8 @@
         "image_EN7kbi": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/DSC01500.jpg",
+            "mobile_image": "shopify://shop_images/DSC01500.jpg",
             "heading": "",
             "heading_size": 8,
             "button_label": "Shop now",
@@ -60,7 +64,7 @@
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#262428",
             "button_color": "#ffffff",
-            "button_background_color": "#e6e5e7",
+            "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#ffffff",
             "button_hover_background_color": "#343434",
             "overlay_color": "rgba(0,0,0,0)"
@@ -69,6 +73,8 @@
         "image_Wyijdd": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/DSC01550.jpg",
+            "mobile_image": "shopify://shop_images/DSC01550.jpg",
             "heading": "",
             "heading_size": 8,
             "button_label": "Shop now",
@@ -77,7 +83,7 @@
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#262428",
             "button_color": "#ffffff",
-            "button_background_color": "#e6e5e7",
+            "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#ffffff",
             "button_hover_background_color": "#343434",
             "overlay_color": "rgba(0,0,0,0)"
@@ -131,6 +137,19 @@
     "image_gallery_q7K3eE": {
       "type": "image--gallery",
       "blocks": {
+        "image_DEJKc6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/G39A5966.png",
+            "link": "shopify://collections/collections",
+            "title": "",
+            "subheading": "",
+            "overlay-btn-text": "",
+            "show-gradient-overlay": false,
+            "overlay_font_color": "#262428",
+            "overlay_color": "#ffffff"
+          }
+        },
         "image_EVWEjE": {
           "type": "image",
           "settings": {
@@ -157,24 +176,25 @@
             "overlay_color": "#ffffff"
           }
         },
-        "image_DEJKc6": {
+        "image_AhFRT8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC00790.jpg",
+            "image": "shopify://shop_images/DSC01236_a9d9f388-8777-4415-9da4-58e5ebe28e99.jpg",
             "link": "shopify://collections/hoodie",
             "title": "",
             "subheading": "",
             "overlay-btn-text": "",
             "show-gradient-overlay": false,
-            "overlay_font_color": "#262428",
+            "overlay_font_color": "#323131",
             "overlay_color": "#ffffff"
           }
         }
       },
       "block_order": [
+        "image_DEJKc6",
         "image_EVWEjE",
         "image_eNAV7n",
-        "image_DEJKc6"
+        "image_AhFRT8"
       ],
       "settings": {
         "colors": "white",
