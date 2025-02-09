@@ -200,7 +200,7 @@
         "product_card_title_4C3xCe": {
           "type": "product_card_title",
           "settings": {
-            "product_card_title__font": "body"
+            "product_card_title__font": "heading"
           }
         },
         "product_card_price_prB3Li": {
@@ -211,7 +211,6 @@
         },
         "product_card_vendor_pW7PVU": {
           "type": "product_card_vendor",
-          "disabled": true,
           "settings": {
             "product_card_vendor__font": "body"
           }
