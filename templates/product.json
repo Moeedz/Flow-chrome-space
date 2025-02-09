@@ -37,7 +37,7 @@
         "options": {
           "type": "options",
           "settings": {
-            "hide_out_of_stock_variants": false,
+            "hide_out_of_stock_variants": true,
             "variant_style": "swatches",
             "thumbnail_changes_variant": false,
             "size_guide_page": "",
@@ -53,6 +53,7 @@
         },
         "a7717974-ed85-4cde-80ef-4751178acf57": {
           "type": "text-with-icon",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "text": "Ship within 3 days",
@@ -62,6 +63,7 @@
         },
         "2f3ddc8d-6514-403d-a884-88c9a0294300": {
           "type": "stock-level-indicator",
+          "disabled": true,
           "settings": {
             "stock-level-indicator-style": "classic",
             "bar-indicator-color": "standard",
@@ -98,7 +100,7 @@
           "type": "collapsible-tab",
           "settings": {
             "icon": "info",
-            "heading": "details",
+            "heading": "Description",
             "open_close_icon": "caret",
             "text": "{{ product.description }}",
             "page": "",
@@ -120,6 +122,7 @@
         },
         "b3864090-4f25-4db2-bddb-c549e9472be6": {
           "type": "collapsible-tab",
+          "disabled": true,
           "settings": {
             "icon": "service",
             "heading": "assistance",
@@ -171,7 +174,7 @@
         "show_out_of_stock_email": true,
         "image_size": "medium",
         "image-display": "full-size",
-        "thumbnail_position": "left",
+        "thumbnail_position": "below",
         "enable_video_loop": true,
         "app_margin_bottom": 17
       }
