@@ -2,7 +2,15 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
   <style>
-   
+   @media screen and (max-width: 767px) {
+     .grid, .grid--full, .grid--rev, .grid-uniform {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -181px !important;
+    margin-right: -151px !important;
+}
+   }
    
   </style>
   <!-- Basic page needs ================================================== -->
