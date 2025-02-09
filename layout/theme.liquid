@@ -18,16 +18,17 @@
   .wrapper-padded.product-form-vue.main-page-container.product-section {
     max-width: 100% !important;
 }
-    </style>
-    {%- endif -%}
-  <style>
-  @media screen and (min-width: 768px) {
+     @media screen and (min-width: 768px) {
 .grid.product-single.product-sticky-wrapper.variant-swatches-enabled {
     display: flex !important;
     justify-content: space-between !important;
 }
-  }
+    .grid__item.product-form-wrapper.large--six-twelfths.product-sticky {
+    width: 30% !important;
+}  
+  } 
     </style>
+    {%- endif -%}
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
   {%- comment -%}DemoStoreRequirements{%- endcomment -%}
