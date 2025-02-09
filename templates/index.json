@@ -148,14 +148,14 @@
         "colors": "light",
         "textPosition": "center",
         "textAlignment": "center",
-        "heading--text-size": 26,
-        "text--text-size": 18,
+        "heading--text-size": 12,
+        "text--text-size": 12,
         "link": "",
-        "button_label": "NEW ARRIVALS",
-        "button-text": "#ffffff",
-        "button-background": "#262428",
-        "hover-button-text": "#ffffff",
-        "hover-button-background": "#494949"
+        "button_label": "<b>NEW ARRIVALS</b>",
+        "button-text": "#fff",
+        "button-background": "rgba(0,0,0,0)",
+        "hover-button-text": "#fff",
+        "hover-button-background": "#000000"
       }
     },
     "image_gallery_q7K3eE": {
