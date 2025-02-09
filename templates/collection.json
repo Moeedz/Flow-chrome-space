@@ -61,7 +61,7 @@
         "enable_collection_description": true,
         "enable_filtering": true,
         "show_swatch_filter_labels": true,
-        "enable_sorting": true
+        "enable_sorting": false
       }
     }
   },
