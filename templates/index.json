@@ -136,19 +136,26 @@
         "block_alignment": "flex-start"
       }
     },
-    "image_image_with_text_h34kHk": {
-      "type": "image--image-with-text",
+    "image_image_with_text_overlay_xHLLMM": {
+      "type": "image--image-with-text-overlay",
       "settings": {
+        "image": "shopify://shop_images/DSC01996.jpg",
+        "image_height": "50vw",
+        "bg_image_overlay_opacity": 0,
+        "parallax": true,
+        "title": "",
+        "text": "",
         "colors": "light",
-        "image": "shopify://shop_images/IMG_6262.heic",
-        "text_overlapping_image": false,
-        "section-width": "full",
-        "layout": "left",
-        "text_alignment": "center",
-        "title": "Share brand or product details",
-        "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-        "button_label": "",
-        "button_link": ""
+        "textPosition": "center",
+        "textAlignment": "center",
+        "heading--text-size": 26,
+        "text--text-size": 18,
+        "link": "",
+        "button_label": "NEW ARRIVALS",
+        "button-text": "#ffffff",
+        "button-background": "#262428",
+        "hover-button-text": "#ffffff",
+        "hover-button-background": "#494949"
       }
     },
     "image_gallery_q7K3eE": {
@@ -222,93 +229,12 @@
         "section-width": "full",
         "content-position": "hide"
       }
-    },
-    "events_calendar_MtYVd4": {
-      "type": "events-calendar",
-      "blocks": {
-        "event_qQmzGL": {
-          "type": "event",
-          "settings": {
-            "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
-            "tbc": false,
-            "day_time": "Saturday, 7:30pm",
-            "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
-            "url": "",
-            "btn_text": "More info"
-          }
-        },
-        "event_E3nKmn": {
-          "type": "event",
-          "settings": {
-            "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
-            "tbc": false,
-            "day_time": "Saturday, 7:30pm",
-            "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
-            "url": "",
-            "btn_text": "More info"
-          }
-        },
-        "event_YeUXU7": {
-          "type": "event",
-          "settings": {
-            "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
-            "tbc": false,
-            "day_time": "Saturday, 7:30pm",
-            "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
-            "url": "",
-            "btn_text": "More info"
-          }
-        },
-        "event_WjCdGi": {
-          "type": "event",
-          "settings": {
-            "grid_image_size": "square",
-            "day": 10,
-            "month": "Jan",
-            "tbc": false,
-            "day_time": "Saturday, 7:30pm",
-            "price": "",
-            "event_heading": "Event heading",
-            "event_location": "Location",
-            "url": "",
-            "btn_text": "More info"
-          }
-        }
-      },
-      "block_order": [
-        "event_qQmzGL",
-        "event_E3nKmn",
-        "event_YeUXU7",
-        "event_WjCdGi"
-      ],
-      "disabled": true,
-      "settings": {
-        "colors": "white",
-        "heading": "",
-        "description": "",
-        "layout": "grid",
-        "cards_per_row": 4,
-        "expand_card": false
-      }
     }
   },
   "order": [
     "image_slideshow_8ijpMy",
     "collage_builder_RWzp3i",
-    "image_image_with_text_h34kHk",
-    "image_gallery_q7K3eE",
-    "events_calendar_MtYVd4"
+    "image_image_with_text_overlay_xHLLMM",
+    "image_gallery_q7K3eE"
   ]
 }
