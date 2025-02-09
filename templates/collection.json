@@ -12,15 +12,6 @@
   "sections": {
     "collection-header-default": {
       "type": "template--collection--header",
-      "blocks": {
-        "19eeeda1-0ae2-47d0-ab8d-2c7a043f0c67": {
-          "type": "description",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "19eeeda1-0ae2-47d0-ab8d-2c7a043f0c67"
-      ],
       "settings": {}
     },
     "product-grid": {
@@ -44,24 +35,18 @@
           "settings": {
             "product_card_price__font": "body"
           }
-        },
-        "product_card_quick_shop": {
-          "type": "product_card_quick_shop",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
         "product_card_image",
         "product_card_title",
-        "product_card_price",
-        "product_card_quick_shop"
+        "product_card_price"
       ],
       "settings": {
-        "products-per-page": 3,
+        "products-per-page": 20,
         "desktop-products-per-row": 4,
         "mobile-products-per-row": "2",
-        "pagination_options": "pagination_infinite_scrolling",
+        "pagination_options": "pagination_load_more",
         "desktop_position": "topbar",
         "enable_collection_title": true,
         "enable_collection_description": false,
