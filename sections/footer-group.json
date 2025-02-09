@@ -54,6 +54,7 @@
     },
     "newsletter_newsletter_zc97Ew": {
       "type": "newsletter--newsletter",
+      "disabled": true,
       "settings": {
         "colors": "light",
         "newsletter_heading": "Join our Mailing List",
