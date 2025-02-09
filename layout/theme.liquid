@@ -1,6 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
+  <style>
+.payment-icons svg {
+    height: 40px !important;
+    width: 35px !important;
+}
+    </style>
   {%- if template == 'collection' -%}
   <style>
   section.shopify-section.main-page-container.wrapper-padded {
