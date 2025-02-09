@@ -28,7 +28,7 @@
         "product_card_title": {
           "type": "product_card_title",
           "settings": {
-            "product_card_title__font": "body"
+            "product_card_title__font": "heading"
           }
         },
         "product_card_price": {
