@@ -51,7 +51,7 @@
         "product_card_vendor_pemMt6"
       ],
       "settings": {
-        "products-per-page": 20,
+        "products-per-page": 15,
         "desktop-products-per-row": 4,
         "mobile-products-per-row": "2",
         "pagination_options": "pagination_load_more",
