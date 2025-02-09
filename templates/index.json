@@ -138,7 +138,6 @@
     },
     "image_image_with_text_overlay_xHLLMM": {
       "type": "image--image-with-text-overlay",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DSC01996.jpg",
         "image_height": "50vw",
@@ -224,7 +223,7 @@
       "settings": {
         "colors": "light",
         "title": "",
-        "richtext": "<h4><strong>EXPLORE ARE NEW COLLECTIONS</strong></h4>",
+        "richtext": "",
         "remove-spacing": true,
         "full-width": false,
         "section-width": "full",
