@@ -34,7 +34,7 @@
             "caption-text": "#242424",
             "button-text": "#ffffff",
             "button-background": "#242424",
-            "hover-button-background": "#9F9F9F"
+            "hover-button-background": "#9f9f9f"
           }
         }
       },
@@ -58,12 +58,12 @@
             "mobile_image": "shopify://shop_images/DSC01500.jpg",
             "heading": "",
             "heading_size": 8,
-            "button_label": "Shop now",
+            "button_label": "<b>Shop now</b>",
             "url": "shopify://collections/all",
             "desktop_position": "md-min-align-bottom md-min-justify-center",
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#262428",
-            "button_color": "#ffffff",
+            "button_color": "#262428",
             "button_background_color": "rgba(0,0,0,0)",
             "button_hover_color": "#ffffff",
             "button_hover_background_color": "#000000",
