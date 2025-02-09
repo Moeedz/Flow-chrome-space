@@ -145,7 +145,7 @@
         "parallax": false,
         "title": "",
         "text": "",
-        "colors": "light",
+        "colors": "accent",
         "textPosition": "center",
         "textAlignment": "center",
         "heading--text-size": 12,
