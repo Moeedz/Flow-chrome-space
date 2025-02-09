@@ -141,8 +141,8 @@
             "cross_sell_product_1": "",
             "cross_sell_product_2": "",
             "cross_sell_product_3": "",
-            "collapsible_tab": false,
-            "icon": "none",
+            "collapsible_tab": true,
+            "icon": "store",
             "open_close_icon": "plus_minus",
             "margin_bottom": 20
           }
@@ -211,6 +211,7 @@
         },
         "product_card_vendor_pW7PVU": {
           "type": "product_card_vendor",
+          "disabled": true,
           "settings": {
             "product_card_vendor__font": "body"
           }
@@ -229,7 +230,7 @@
         "product_card_quick_shop_Xcew36"
       ],
       "custom_css": [
-        "h2 {font-size: 16px; text-align: left;}"
+        "h2 {font-size: 10px; text-align: left;}"
       ],
       "settings": {
         "product_recommendations_heading": "You may also like"

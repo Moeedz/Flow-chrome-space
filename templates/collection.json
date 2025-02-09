@@ -12,6 +12,7 @@
   "sections": {
     "collection-header-default": {
       "type": "template--collection--header",
+      "disabled": true,
       "settings": {}
     },
     "product-grid": {
