@@ -14,14 +14,9 @@
     "footer-main": {
       "type": "footer-main",
       "blocks": {
-        "follow_on_shop_JbiHyf": {
-          "type": "follow_on_shop",
-          "settings": {
-            "title": "Follow us on the Shop app"
-          }
-        },
         "social": {
           "type": "social",
+          "disabled": true,
           "settings": {
             "social_title": ""
           }
@@ -43,7 +38,6 @@
         }
       },
       "block_order": [
-        "follow_on_shop_JbiHyf",
         "social",
         "menu_h37rE7",
         "newsletter_eiAzzC"
@@ -65,7 +59,7 @@
       "type": "footer-bottom",
       "settings": {
         "show_methods_of_payment": true,
-        "center_content_on_desktop": true,
+        "center_content_on_desktop": false,
         "footer_text": "",
         "show_currency_selector": true,
         "show_locale_selector": false
