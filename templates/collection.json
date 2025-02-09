@@ -57,9 +57,9 @@
         "pagination_options": "pagination_load_more",
         "desktop_position": "topbar",
         "enable_collection_title": true,
-        "enable_collection_description": false,
+        "enable_collection_description": true,
         "enable_filtering": true,
-        "show_swatch_filter_labels": false,
+        "show_swatch_filter_labels": true,
         "enable_sorting": true
       }
     }
