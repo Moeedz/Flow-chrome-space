@@ -110,6 +110,7 @@
         },
         "9c341458-2d2c-4317-a2cc-346e220f53e0": {
           "type": "collapsible-tab",
+          "disabled": true,
           "settings": {
             "icon": "measuring_tape",
             "heading": "size guide",
@@ -173,8 +174,8 @@
         "enable_sticky": true,
         "show_out_of_stock_email": true,
         "image_size": "medium",
-        "image-display": "full-size",
-        "thumbnail_position": "below",
+        "image-display": "thumbnails",
+        "thumbnail_position": "left",
         "enable_video_loop": true,
         "app_margin_bottom": 17
       }
@@ -192,7 +193,7 @@
         "product_card_image_agxVCQ": {
           "type": "product_card_image",
           "settings": {
-            "enable_quick_shop": false,
+            "enable_quick_shop": true,
             "disable_quick_shop_mobile": true
           }
         },
@@ -229,7 +230,7 @@
         "product_card_quick_shop_Xcew36"
       ],
       "custom_css": [
-        "h2 {font-size: 14px; text-align: left;}"
+        "h2 {font-size: 16px; text-align: left;}"
       ],
       "settings": {
         "product_recommendations_heading": "You may also like"
