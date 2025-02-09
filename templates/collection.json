@@ -28,7 +28,7 @@
         "product_card_title": {
           "type": "product_card_title",
           "settings": {
-            "product_card_title__font": "body"
+            "product_card_title__font": "heading"
           }
         },
         "product_card_price": {
@@ -39,6 +39,7 @@
         },
         "product_card_vendor_pemMt6": {
           "type": "product_card_vendor",
+          "disabled": true,
           "settings": {
             "product_card_vendor__font": "body"
           }
@@ -54,7 +55,7 @@
         "products-per-page": 15,
         "desktop-products-per-row": 4,
         "mobile-products-per-row": "2",
-        "pagination_options": "pagination_load_more",
+        "pagination_options": "pagination_infinite_scrolling",
         "desktop_position": "topbar",
         "enable_collection_title": true,
         "enable_collection_description": true,
