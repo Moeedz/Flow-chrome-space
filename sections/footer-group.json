@@ -33,14 +33,12 @@
       "block_order": [
         "social"
       ],
-      "disabled": true,
       "settings": {
         "alignment": "left"
       }
     },
     "footer-bottom": {
       "type": "footer-bottom",
-      "disabled": true,
       "settings": {
         "show_methods_of_payment": true,
         "center_content_on_desktop": true,
