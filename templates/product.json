@@ -80,7 +80,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_smart_checkout": true,
+            "show_smart_checkout": false,
             "enable_gift_card_recipient_form": true,
             "margin_bottom": 20
           }
@@ -110,10 +110,9 @@
         },
         "9c341458-2d2c-4317-a2cc-346e220f53e0": {
           "type": "collapsible-tab",
-          "disabled": true,
           "settings": {
-            "icon": "measuring_tape",
-            "heading": "size guide",
+            "icon": "exchange",
+            "heading": "Delivery & Return",
             "open_close_icon": "caret",
             "text": "<p>Share some information about your product</p>",
             "page": "",
@@ -149,6 +148,7 @@
         },
         "4fdb087c-4728-4785-b270-a71a092b7898": {
           "type": "social_sharing",
+          "disabled": true,
           "settings": {
             "margin_bottom": 20
           }
