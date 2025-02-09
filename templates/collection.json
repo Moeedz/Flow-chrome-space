@@ -47,6 +47,7 @@
         },
         "product_card_quick_shop": {
           "type": "product_card_quick_shop",
+          "disabled": true,
           "settings": {}
         }
       },
@@ -57,12 +58,12 @@
         "product_card_quick_shop"
       ],
       "settings": {
-        "products-per-page": 10,
+        "products-per-page": 3,
         "desktop-products-per-row": 4,
-        "mobile-products-per-row": "1",
-        "pagination_options": "pagination_default",
+        "mobile-products-per-row": "2",
+        "pagination_options": "pagination_infinite_scrolling",
         "desktop_position": "topbar",
-        "enable_collection_title": false,
+        "enable_collection_title": true,
         "enable_collection_description": false,
         "enable_filtering": true,
         "show_swatch_filter_labels": true,
