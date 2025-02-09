@@ -13,6 +13,13 @@
     text-transform: uppercase !important;
 }
   </style>
+  {%- if template == 'product' -%}
+  <style>
+  .wrapper-padded.product-form-vue.main-page-container.product-section {
+    max-width: 100% !important;
+}
+    </style>
+    {%- endif -%}
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
   {%- comment -%}DemoStoreRequirements{%- endcomment -%}
