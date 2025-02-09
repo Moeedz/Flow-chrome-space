@@ -35,12 +35,19 @@
           "settings": {
             "product_card_price__font": "body"
           }
+        },
+        "product_card_vendor_pemMt6": {
+          "type": "product_card_vendor",
+          "settings": {
+            "product_card_vendor__font": "body"
+          }
         }
       },
       "block_order": [
         "product_card_image",
         "product_card_title",
-        "product_card_price"
+        "product_card_price",
+        "product_card_vendor_pemMt6"
       ],
       "settings": {
         "products-per-page": 20,
