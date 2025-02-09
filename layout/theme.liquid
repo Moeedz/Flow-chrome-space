@@ -1,45 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <head>
+  {%- if template == 'collection' -%}
   <style>
-  /* @media screen and (min-width: 768px) {
-     .grid, .grid--full, .grid--rev, .grid-uniform {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: -170px !important;
-    margin-right: -140px !important;
+  section.shopify-section.main-page-container.wrapper-padded {
+    max-width: 100% !important;
 }
-   }
-    @media screen and (min-width: 768px) {
-    .product-price--regular {
-    display: flex !important;
-    justify-content: center;
-    margin: -32px 5px 4px 400px;
-}
-    }
-   @media screen and (max-width: 767px) {
-    .collection-main-body-inner {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -16.5px !important;
-        margin-right: -15.5px !important;
-}
-    }
-    h4 {
-    margin: -34px 5px 20px 6px !important;
-}
-    @media screen and (max-width: 767px) {
-    .product-grid--price.product-grid--price-font-body {
-    margin: 0px 0px -41px 0px;
-}
-    }
-   @media screen and (max-width: 767px) {
-     span.money.price--regular-price {
-    margin: 0px 50px 60px -53px !important;
-}
-   } */
   </style>
+  {%- endif -%}
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
   {%- comment -%}DemoStoreRequirements{%- endcomment -%}
