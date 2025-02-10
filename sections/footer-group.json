@@ -22,9 +22,7 @@
     },
     "footer-bottom": {
       "type": "footer-bottom",
-      "custom_css": [
-        ".footer-bottom.site-footer.product-sticker-stop.footer-alignment--left {padding-bottom: 0 !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "show_methods_of_payment": true,
         "center_content_on_desktop": false,
@@ -64,9 +62,7 @@
         "menu_h37rE7",
         "newsletter_eiAzzC"
       ],
-      "custom_css": [
-        "footer.footer-main.site-footer.product-sticker-stop.footer-alignment--left {padding-top: 0 !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "alignment": "left"
       }
