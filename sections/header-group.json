@@ -34,7 +34,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "sticky_header": true,
+        "sticky_header": false,
         "enable_search": true,
         "logo": "shopify://shop_images/chrome_space_logo-01_5344926b-f640-4a9b-8f15-c4d179b99e2c.svg",
         "logo-placement": "center",
@@ -45,7 +45,7 @@
         "show_icons": false,
         "cart-style": "shopping-bag",
         "cart_count": true,
-        "overlay_header_homepage": false,
+        "overlay_header_homepage": true,
         "overlay_header_collection": false,
         "overlay_header_list_collection": false,
         "overlay_header_contact": false,
