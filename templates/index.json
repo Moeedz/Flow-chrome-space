@@ -102,7 +102,7 @@
         "title_custom": false,
         "title_font": "josefin_sans_n4",
         "title_size": 16,
-        "title_size_mobile": 14,
+        "title_size_mobile": 11,
         "title_height": 130,
         "title_mt": 8,
         "title_mt_mobile": 8,
@@ -237,6 +237,7 @@
     },
     "featured_collection_16_gh33Ap": {
       "type": "featured-collection-16",
+      "custom_css": [],
       "settings": {
         "heading": "",
         "heading_custom": false,
@@ -284,7 +285,7 @@
         "title_custom": false,
         "title_font": "josefin_sans_n4",
         "title_size": 16,
-        "title_size_mobile": 14,
+        "title_size_mobile": 11,
         "title_height": 130,
         "title_mt": 8,
         "title_mt_mobile": 8,
