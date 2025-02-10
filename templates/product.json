@@ -45,12 +45,6 @@
             "margin_bottom": 20
           }
         },
-        "quantity": {
-          "type": "quantity",
-          "settings": {
-            "margin_bottom": 40
-          }
-        },
         "a7717974-ed85-4cde-80ef-4751178acf57": {
           "type": "text-with-icon",
           "disabled": true,
@@ -171,7 +165,6 @@
         "price",
         "f0f0e917-92a5-4957-a68e-2d0bb38d7819",
         "options",
-        "quantity",
         "a7717974-ed85-4cde-80ef-4751178acf57",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
         "buy_buttons",
