@@ -52,7 +52,8 @@
       "type": "featured-collection-16",
       "custom_css": [
         "p.featured-title-template--17354556637265__featured_collection_16_kGNKef {margin-left: 0 !important; font-weight: 500 !important;}",
-        ".featured-price-template--17354556637265__featured_collection_16_kGNKef {margin-left: 0 !important;}"
+        ".featured-price-template--17354556637265__featured_collection_16_kGNKef {margin-left: 0 !important;}",
+        ".featured-top-template--17354556637265__featured_collection_16_kGNKef {display: none !important;}"
       ],
       "settings": {
         "heading": "",
