@@ -24,10 +24,10 @@
       "type": "footer-bottom",
       "custom_css": [],
       "settings": {
-        "show_methods_of_payment": true,
+        "show_methods_of_payment": false,
         "center_content_on_desktop": false,
         "footer_text": "",
-        "show_currency_selector": true,
+        "show_currency_selector": false,
         "show_locale_selector": false
       }
     },
