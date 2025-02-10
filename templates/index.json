@@ -237,7 +237,10 @@
     },
     "featured_collection_16_gh33Ap": {
       "type": "featured-collection-16",
-      "custom_css": [],
+      "custom_css": [
+        "p.featured-title-template--17354556637265__featured_collection_16_gh33Ap {margin-left: 0 !important;}",
+        ".featured-price-template--17354556637265__featured_collection_16_gh33Ap {margin-left: 0 !important;}"
+      ],
       "settings": {
         "heading": "",
         "heading_custom": false,
