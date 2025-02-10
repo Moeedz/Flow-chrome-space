@@ -33,6 +33,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "header.site-header.overlay-header * {color: black !important;}"
+      ],
       "settings": {
         "sticky_header": false,
         "enable_search": true,
