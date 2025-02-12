@@ -96,7 +96,7 @@
             "icon": "none",
             "heading": "Description",
             "open_close_icon": "plus_minus",
-            "text": "{{ product.description }}",
+            "text": "<p>{{ product.metafields.custom.desc_tab | metafield_tag }}</p>",
             "page": "",
             "open_by_default": false,
             "margin_bottom": 0
