@@ -79,7 +79,7 @@
         "image_border_thickness": 0,
         "show_badge": true,
         "badge_custom": false,
-        "badge_font": "josefin_sans_n4",
+        "badge_font": "lato_n4",
         "badge_size": 11,
         "badge_size_mobile": 11,
         "badge_height": 100,
