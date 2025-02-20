@@ -125,7 +125,7 @@
                   </div>
                 </div>
               </td>
-            </div>
+            
               <td class="text-center cart-total-label" data-label="{{ 'cart.label.total' | t }}">
                 {% assign original_line_price = item.original_line_price %}
                 {% if item.product.compare_at_price > item.price %}
@@ -164,6 +164,7 @@
                   </ul>
                 {%- endif -%}
               </td>
+              </div>
             </tr>
           {% endfor %}
         </tbody>
