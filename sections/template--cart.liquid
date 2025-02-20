@@ -37,6 +37,7 @@
                   {% render 'responsive-image' with item.image, alt: cart_page_product_image_alt, blur: false %}
                 </a>
               </td>
+              <div class="moeedtest">
               <td class="cart__row--product-details">
                 <a class="cart__row--title" href="{{ item.url }}">
                   {{ item.product.title }}
@@ -124,6 +125,7 @@
                   </div>
                 </div>
               </td>
+            </div>
               <td class="text-center cart-total-label" data-label="{{ 'cart.label.total' | t }}">
                 {% assign original_line_price = item.original_line_price %}
                 {% if item.product.compare_at_price > item.price %}
