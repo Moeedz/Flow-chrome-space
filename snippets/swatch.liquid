@@ -158,21 +158,22 @@
                 v-model="option{{ option_index | plus: 1 }}"
               />
               {% if is_color %}
-                {% assign bg_img_url = value | handle | append: '.' | append: file_extension | asset_url %}
+  {% assign variant_image = variant.featured_image | default: value | handle | append: '.' | append: file_extension | asset_url %}
+  <label
+    for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}" 
+    style="background-image: url({{ variant_image }}); background-size: cover; background-position: center;"
+  >
+    <span class="product-swatch-sold-out product-swatch-sold-out-background"></span>
+    <span class="product-swatch-sold-out product-swatch-sold-out-foreground"></span>
+  </label>
+{% else %}
+  <label
+    for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}"
+  >
+    {{ value }}
+  </label>
+{% endif %}
 
-                <label
-                  for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}" style="background-color: {{ value }};{% if bg_img_url contains 'v=' %} background-image: url({{ bg_img_url }});{% endif %}"
-                >
-                  <span class="product-swatch-sold-out product-swatch-sold-out-background"></span>
-                  <span class="product-swatch-sold-out product-swatch-sold-out-foreground"></span>
-                </label>
-              {% else %}
-                <label
-                  for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}"
-                >
-                  {{ value }}
-                </label>
-              {% endif %}
             </div>
           {% endunless %}
         {% endfor %}
