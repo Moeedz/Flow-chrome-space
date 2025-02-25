@@ -158,10 +158,11 @@
                 v-model="option{{ option_index | plus: 1 }}"
               />
               {% if is_color %}
-                {% assign bg_img_url = value | handle | append: '.' | append: file_extension | asset_url %}
+                {% assign bg_img_url = variant.featured_media | img_url: '100x100', crop: 'center' %}
 
                 <label
-                  for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}" style="background-color: {{ value }};{% if bg_img_url contains 'v=' %} background-image: url({{ bg_img_url }});{% endif %}"
+                  for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}" 
+                  style="{% if bg_img_url %} background-image: url({{ bg_img_url }}); background-size: cover;{% else %} background-color: {{ value }};{% endif %}"
                 >
                   <span class="product-swatch-sold-out product-swatch-sold-out-background"></span>
                   <span class="product-swatch-sold-out product-swatch-sold-out-foreground"></span>
