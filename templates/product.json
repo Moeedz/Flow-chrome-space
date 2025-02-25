@@ -38,7 +38,7 @@
           "type": "options",
           "settings": {
             "hide_out_of_stock_variants": true,
-            "variant_style": "dropdowns",
+            "variant_style": "swatches",
             "thumbnail_changes_variant": false,
             "size_guide_page": "",
             "size_option_name": "Size",
