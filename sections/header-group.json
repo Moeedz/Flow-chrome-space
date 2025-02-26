@@ -42,7 +42,7 @@
         "logo": "shopify://shop_images/chrome_space_logo-01_5344926b-f640-4a9b-8f15-c4d179b99e2c.svg",
         "logo-placement": "center",
         "logo_max_width": 235,
-        "logo_max_width_mobile": 140,
+        "logo_max_width_mobile": 150,
         "logo_padding": 0,
         "mobile_social_icons": true,
         "show_icons": false,
