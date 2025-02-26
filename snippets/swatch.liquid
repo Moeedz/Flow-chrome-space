@@ -162,7 +162,7 @@
 
                 <label
                   for="{{ section.id }}-swatch-{{ option_index }}-{{ value | escape }}" 
-                  style="{% if bg_img_url %} background-image: url({{ bg_img_url }}); background-size: cover;{% else %} background-color: {{ value }};{% endif %}"
+                  style="{% if bg_img_url %} background-image: url({{ bg_img_url }}); background-size: contain; background-position-y: center;{% else %} background-color: {{ value }};{% endif %}"
                 >
                   <span class="product-swatch-sold-out product-swatch-sold-out-background"></span>
                   <span class="product-swatch-sold-out product-swatch-sold-out-foreground"></span>
