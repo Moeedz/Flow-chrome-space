@@ -32,9 +32,9 @@
             "image_overlay": "#000000",
             "image_overlay_opacity": 0,
             "caption-text": "#ffffff",
-            "button-text": "#ffffff",
-            "button-background": "#000000",
-            "hover-button-background": "#000000"
+            "button-text": "#000000",
+            "button-background": "#ffffff",
+            "hover-button-background": "#ffffff"
           }
         }
       },
