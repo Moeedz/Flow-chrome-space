@@ -34,7 +34,7 @@
             "caption-text": "#ffffff",
             "button-text": "#ffffff",
             "button-background": "#000000",
-            "hover-button-background": "#9F9F9F"
+            "hover-button-background": "#9f9f9f"
           }
         }
       },
@@ -196,7 +196,7 @@
             "title": "",
             "text": "core collection is fully restocked online",
             "first_button_label": "Shop now",
-            "first_button_link": "shopify://collections",
+            "first_button_link": "shopify://collections/core-collection",
             "second_button_label": "",
             "second_button_link": "",
             "image": "shopify://shop_images/IMG_6225.heic",
