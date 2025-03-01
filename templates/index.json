@@ -34,7 +34,7 @@
             "caption-text": "#ffffff",
             "button-text": "#ffffff",
             "button-background": "#000000",
-            "hover-button-background": "#9f9f9f"
+            "hover-button-background": "#000000"
           }
         }
       },
@@ -212,7 +212,7 @@
             "caption-text": "#ffffff",
             "button-text": "#000000",
             "button-background": "#ffffff",
-            "hover-button-background": "#000000"
+            "hover-button-background": "#ffffff"
           }
         }
       },
