@@ -9,15 +9,15 @@
  */
 {
   "sections": {
-    "image_slideshow_8ijpMy": {
+    "image_slideshow_kyt9Dz": {
       "type": "image--slideshow",
       "blocks": {
-        "image_HrBqYE": {
+        "image_NDBxxR": {
           "type": "image",
           "settings": {
             "title": "",
-            "text": "our spring summer'25 new collection is now live",
-            "first_button_label": "show now",
+            "text": "ss'25 new launches live now",
+            "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/new-in-25",
             "second_button_label": "",
             "second_button_link": "",
@@ -26,25 +26,25 @@
             "desktop-caption-body-text-size": 24,
             "text_position": "bottom",
             "mobile_image": "shopify://shop_images/IMG_6262.heic",
-            "mobile-caption-heading-size": 25,
-            "mobile-caption-body-text-size": 14,
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
             "mobile_text_position": "bottom",
-            "image_overlay": "#ffffff",
+            "image_overlay": "#000000",
             "image_overlay_opacity": 0,
             "caption-text": "#ffffff",
             "button-text": "#ffffff",
-            "button-background": "rgba(0,0,0,0)",
-            "hover-button-background": "rgba(0,0,0,0)"
+            "button-background": "#000000",
+            "hover-button-background": "#9F9F9F"
           }
         }
       },
       "block_order": [
-        "image_HrBqYE"
+        "image_NDBxxR"
       ],
       "settings": {
         "desktop_height": "full_screen",
-        "mobile_height": "original",
-        "slide_navigation_style": "arrows",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
         "slide_transition_delay": 7
       }
     },
@@ -164,54 +164,6 @@
         "lazy": true
       }
     },
-    "collage_builder_RWzp3i": {
-      "type": "collage-builder",
-      "blocks": {
-        "image_EN7kbi": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/DSC01956.jpg",
-            "mobile_image": "shopify://shop_images/IMG_6537.heic",
-            "heading": "",
-            "heading_size": 8,
-            "button_label": "View",
-            "url": "shopify://collections/core-collection",
-            "desktop_position": "md-min-align-bottom md-min-justify-center",
-            "mobile_position": "md-max-align-bottom md-max-justify-center",
-            "text_color": "#ffffff",
-            "button_color": "#ffffff",
-            "button_background_color": "rgba(0,0,0,0)",
-            "button_hover_color": "#ffffff",
-            "button_hover_background_color": "#000000",
-            "overlay_color": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "image_EN7kbi"
-      ],
-      "custom_css": [],
-      "settings": {
-        "color_scheme": "light",
-        "title": "",
-        "description": "",
-        "remove_spacing": true,
-        "section_width": "full",
-        "width_1": "3",
-        "height_1": "3",
-        "width_2": "3",
-        "height_2": "3",
-        "width_3": "3",
-        "height_3": "3",
-        "width_4": "3",
-        "height_4": "3",
-        "width_5": "3",
-        "height_5": "3",
-        "width_6": "3",
-        "height_6": "3",
-        "block_alignment": "flex-start"
-      }
-    },
     "image_image_with_text_overlay_xHLLMM": {
       "type": "image--image-with-text-overlay",
       "disabled": true,
@@ -238,36 +190,13 @@
     "image_slideshow_Ay8k7H": {
       "type": "image--slideshow",
       "blocks": {
-        "image_RJBL7D": {
-          "type": "image",
-          "settings": {
-            "title": "Make a great \nfirst impression",
-            "text": "Add images and text to give focus to your chosen product, collection, or blog post",
-            "first_button_label": "Shop now",
-            "first_button_link": "shopify://collections/all",
-            "second_button_label": "Learn more",
-            "second_button_link": "",
-            "desktop-caption-heading-size": 80,
-            "desktop-caption-body-text-size": 24,
-            "text_position": "center_left",
-            "mobile-caption-heading-size": 36,
-            "mobile-caption-body-text-size": 16,
-            "mobile_text_position": "center_left",
-            "image_overlay": "#262428",
-            "image_overlay_opacity": 0,
-            "caption-text": "#242424",
-            "button-text": "#ffffff",
-            "button-background": "#242424",
-            "hover-button-background": "#9F9F9F"
-          }
-        },
         "image_NnVDBb": {
           "type": "image",
           "settings": {
             "title": "",
             "text": "core collection is fully restocked online",
             "first_button_label": "Shop now",
-            "first_button_link": "shopify://collections/all",
+            "first_button_link": "shopify://collections",
             "second_button_label": "",
             "second_button_link": "",
             "image": "shopify://shop_images/IMG_6225.heic",
@@ -288,7 +217,6 @@
         }
       },
       "block_order": [
-        "image_RJBL7D",
         "image_NnVDBb"
       ],
       "settings": {
@@ -489,9 +417,8 @@
     }
   },
   "order": [
-    "image_slideshow_8ijpMy",
+    "image_slideshow_kyt9Dz",
     "featured_collection_16_kGNKef",
-    "collage_builder_RWzp3i",
     "image_image_with_text_overlay_xHLLMM",
     "image_slideshow_Ay8k7H",
     "featured_collection_16_gh33Ap",
