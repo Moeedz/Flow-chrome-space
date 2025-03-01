@@ -16,8 +16,8 @@
           "type": "image",
           "settings": {
             "title": "",
-            "text": "our core collection",
-            "first_button_label": "view all",
+            "text": "our spring summer'25 new collection is now live",
+            "first_button_label": "show now",
             "first_button_link": "shopify://collections/new-in-25",
             "second_button_label": "",
             "second_button_link": "",
@@ -172,10 +172,10 @@
           "settings": {
             "desktop_image": "shopify://shop_images/DSC01956.jpg",
             "mobile_image": "shopify://shop_images/IMG_6537.heic",
-            "heading": "new in",
+            "heading": "",
             "heading_size": 8,
             "button_label": "View",
-            "url": "shopify://collections/all",
+            "url": "shopify://collections/core-collection",
             "desktop_position": "md-min-align-bottom md-min-justify-center",
             "mobile_position": "md-max-align-bottom md-max-justify-center",
             "text_color": "#ffffff",
@@ -233,6 +233,69 @@
         "button-background": "rgba(0,0,0,0)",
         "hover-button-text": "#ffffff",
         "hover-button-background": "#000000"
+      }
+    },
+    "image_slideshow_Ay8k7H": {
+      "type": "image--slideshow",
+      "blocks": {
+        "image_RJBL7D": {
+          "type": "image",
+          "settings": {
+            "title": "Make a great \nfirst impression",
+            "text": "Add images and text to give focus to your chosen product, collection, or blog post",
+            "first_button_label": "Shop now",
+            "first_button_link": "shopify://collections/all",
+            "second_button_label": "Learn more",
+            "second_button_link": "",
+            "desktop-caption-heading-size": 80,
+            "desktop-caption-body-text-size": 24,
+            "text_position": "center_left",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "mobile_text_position": "center_left",
+            "image_overlay": "#262428",
+            "image_overlay_opacity": 0,
+            "caption-text": "#242424",
+            "button-text": "#ffffff",
+            "button-background": "#242424",
+            "hover-button-background": "#9F9F9F"
+          }
+        },
+        "image_NnVDBb": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "text": "core collection is fully restocked online",
+            "first_button_label": "Shop now",
+            "first_button_link": "shopify://collections/all",
+            "second_button_label": "",
+            "second_button_link": "",
+            "image": "shopify://shop_images/IMG_6225.heic",
+            "desktop-caption-heading-size": 80,
+            "desktop-caption-body-text-size": 24,
+            "text_position": "bottom",
+            "mobile_image": "shopify://shop_images/IMG_6225.heic",
+            "mobile-caption-heading-size": 36,
+            "mobile-caption-body-text-size": 16,
+            "mobile_text_position": "bottom",
+            "image_overlay": "#000000",
+            "image_overlay_opacity": 0,
+            "caption-text": "#ffffff",
+            "button-text": "#000000",
+            "button-background": "#ffffff",
+            "hover-button-background": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_RJBL7D",
+        "image_NnVDBb"
+      ],
+      "settings": {
+        "desktop_height": "full_screen",
+        "mobile_height": "extra_large",
+        "slide_navigation_style": "bars",
+        "slide_transition_delay": 7
       }
     },
     "featured_collection_16_gh33Ap": {
@@ -430,6 +493,7 @@
     "featured_collection_16_kGNKef",
     "collage_builder_RWzp3i",
     "image_image_with_text_overlay_xHLLMM",
+    "image_slideshow_Ay8k7H",
     "featured_collection_16_gh33Ap",
     "image_gallery_q7K3eE"
   ]
