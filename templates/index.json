@@ -206,7 +206,7 @@
             "mobile_image": "shopify://shop_images/DSCF2276.jpg",
             "mobile-caption-heading-size": 36,
             "mobile-caption-body-text-size": 12,
-            "mobile_text_position": "bottom",
+            "mobile_text_position": "center",
             "image_overlay": "#000000",
             "image_overlay_opacity": 0,
             "caption-text": "#ffffff",
