@@ -30,7 +30,7 @@
             "mobile-caption-body-text-size": 12,
             "mobile_text_position": "bottom",
             "image_overlay": "#000000",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 7,
             "caption-text": "#ffffff",
             "button-text": "#000000",
             "button-background": "#ffffff",
