@@ -102,6 +102,18 @@
             "margin_bottom": 0
           }
         },
+        "collapsible_tab_wDTyWF": {
+          "type": "collapsible-tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Collapsible tab",
+            "open_close_icon": "plus_minus",
+            "text": "",
+            "page": "",
+            "open_by_default": false,
+            "margin_bottom": 0
+          }
+        },
         "9c341458-2d2c-4317-a2cc-346e220f53e0": {
           "type": "collapsible-tab",
           "settings": {
@@ -170,6 +182,7 @@
         "buy_buttons",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
         "b0c19132-8e54-4664-b8ce-0a8c7f1f7737",
+        "collapsible_tab_wDTyWF",
         "9c341458-2d2c-4317-a2cc-346e220f53e0",
         "collapsible_tab_Ya9pLA",
         "b3864090-4f25-4db2-bddb-c549e9472be6",
