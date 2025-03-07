@@ -16,10 +16,9 @@
       "blocks": {
         "00-announcement": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "announcement_text": "<strong>Announce something here</strong>",
-            "announcement_bg_color": "#bcc0b8",
+            "announcement_text": "<strong>$8 shipping to worldwide | free shipping on orders over $150</strong>",
+            "announcement_bg_color": "#000000",
             "announcement_text_color": "#ffffff"
           }
         }
