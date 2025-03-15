@@ -26,6 +26,7 @@
       "block_order": [
         "00-announcement"
       ],
+      "disabled": true,
       "settings": {
         "desktop_social_icons": true
       }
