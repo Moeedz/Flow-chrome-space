@@ -74,7 +74,7 @@
         "custom_liquid_VhCdQP": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p>Only {{ variant.inventory_quantity }} left 5 in stock!</p>",
+            "custom_liquid": "<p>Only {{ variant.inventory_quantity }} left 13 in stock!</p>",
             "margin_bottom": 4
           }
         },
