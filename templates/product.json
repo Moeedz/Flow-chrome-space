@@ -71,6 +71,13 @@
             "margin_bottom": 40
           }
         },
+        "custom_liquid_VhCdQP": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p>Only {{ variant.inventory_quantity }} left 5 in stock!</p>",
+            "margin_bottom": 4
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -167,6 +174,7 @@
         "options",
         "a7717974-ed85-4cde-80ef-4751178acf57",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
+        "custom_liquid_VhCdQP",
         "buy_buttons",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
         "b0c19132-8e54-4664-b8ce-0a8c7f1f7737",
