@@ -34,7 +34,7 @@
         "product_card_price": {
           "type": "product_card_price",
           "settings": {
-            "product_card_price__font": "body"
+            "product_card_price__font": "heading"
           }
         },
         "product_card_vendor_pemMt6": {
