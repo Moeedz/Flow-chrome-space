@@ -94,11 +94,6 @@
         "type": "shopify://apps/essential-countdown/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
         "disabled": false,
         "settings": {}
-      },
-      "16973212098894713329": {
-        "type": "shopify://apps/urgency-all-in-one-fomo-app/blocks/app-embed/9f1fd920-d273-490f-83fe-0f8188671817",
-        "disabled": true,
-        "settings": {}
       }
     }
   },
