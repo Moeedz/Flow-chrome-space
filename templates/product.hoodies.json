@@ -55,6 +55,15 @@
             "margin_bottom": 10
           }
         },
+        "text_with_icon_nDyh43": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "none",
+            "text": "model is 6 ft/1.85m and wears a size medium",
+            "link": "",
+            "margin_bottom": 11
+          }
+        },
         "2f3ddc8d-6514-403d-a884-88c9a0294300": {
           "type": "stock-level-indicator",
           "disabled": true,
@@ -166,6 +175,7 @@
         "f0f0e917-92a5-4957-a68e-2d0bb38d7819",
         "options",
         "a7717974-ed85-4cde-80ef-4751178acf57",
+        "text_with_icon_nDyh43",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
         "buy_buttons",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
