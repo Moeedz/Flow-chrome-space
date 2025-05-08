@@ -21,10 +21,19 @@
             "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#000000"
           }
+        },
+        "announcement_mg6Cje": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "10000+ Customers Worldwide",
+            "announcement_bg_color": "#f9f9fb",
+            "announcement_text_color": "#262428"
+          }
         }
       },
       "block_order": [
-        "00-announcement"
+        "00-announcement",
+        "announcement_mg6Cje"
       ],
       "settings": {
         "desktop_social_icons": true
