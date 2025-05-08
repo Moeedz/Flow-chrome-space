@@ -298,6 +298,21 @@
       "settings": {
         "recently_viewed_title": "Recently viewed"
       }
+    },
+    "1746674598c4ce2866": {
+      "type": "apps",
+      "blocks": {
+        "hey_scarcity_low_stock_counter_heymerch_stock_sold_counter_rxgiRL": {
+          "type": "shopify://apps/hey-scarcity-low-stock-counter/blocks/heymerch_stock_sold_counter/b19dc1a4-03bc-4909-ad3e-9e9616c776b7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "hey_scarcity_low_stock_counter_heymerch_stock_sold_counter_rxgiRL"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -306,6 +321,7 @@
     "template_product_recommendations_GxgAUN",
     "product-description",
     "advanced_layout_custom_liquid_GUPqc7",
-    "template_product_recently_viewed_6yGbwX"
+    "template_product_recently_viewed_6yGbwX",
+    "1746674598c4ce2866"
   ]
 }
