@@ -107,7 +107,7 @@
       },
       "5358747256243128097": {
         "type": "shopify://apps/hey-scarcity-low-stock-counter/blocks/heymerch_stock_sold_embeded/b19dc1a4-03bc-4909-ad3e-9e9616c776b7",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
