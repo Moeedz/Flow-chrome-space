@@ -55,6 +55,15 @@
             "margin_bottom": 10
           }
         },
+        "text_with_icon_Yhbqzc": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "none",
+            "text": "model is 6.1 ft and wears a size medium",
+            "link": "",
+            "margin_bottom": 20
+          }
+        },
         "2f3ddc8d-6514-403d-a884-88c9a0294300": {
           "type": "stock-level-indicator",
           "disabled": true,
@@ -166,6 +175,7 @@
         "f0f0e917-92a5-4957-a68e-2d0bb38d7819",
         "options",
         "a7717974-ed85-4cde-80ef-4751178acf57",
+        "text_with_icon_Yhbqzc",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
         "buy_buttons",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
@@ -301,15 +311,6 @@
     },
     "1746674598c4ce2866": {
       "type": "apps",
-      "blocks": {
-        "hey_scarcity_low_stock_counter_heymerch_stock_sold_counter_rxgiRL": {
-          "type": "shopify://apps/hey-scarcity-low-stock-counter/blocks/heymerch_stock_sold_counter/b19dc1a4-03bc-4909-ad3e-9e9616c776b7",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "hey_scarcity_low_stock_counter_heymerch_stock_sold_counter_rxgiRL"
-      ],
       "settings": {
         "include_margins": true
       }
