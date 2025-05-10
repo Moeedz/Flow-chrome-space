@@ -17,7 +17,7 @@
         "00-announcement": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>FREE SHIPPING FOR ALL U.S. ORDERS OVER $100</strong>",
+            "announcement_text": "<strong>FREE SHIPPING FOR ALL U.S. ORDERS</strong>",
             "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#000000"
           }
