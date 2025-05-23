@@ -25,7 +25,7 @@
             "desktop-caption-heading-size": 80,
             "desktop-caption-body-text-size": 24,
             "text_position": "bottom_left",
-            "mobile_image": "shopify://shop_images/DSCF1258.jpg",
+            "mobile_image": "shopify://shop_images/imgonline-com-ua-compressed-xshxfXYN5fNZa7.jpg",
             "mobile-caption-heading-size": 16,
             "mobile-caption-body-text-size": 13,
             "mobile_text_position": "center",
@@ -168,7 +168,6 @@
       "type": "image--image-with-text-overlay",
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/DSC01996.jpg",
         "image_height": "50vw",
         "bg_image_overlay_opacity": 0,
         "parallax": false,
@@ -199,7 +198,6 @@
             "first_button_link": "shopify://collections/core-collection",
             "second_button_label": "",
             "second_button_link": "",
-            "image": "shopify://shop_images/DSCF2276.jpg",
             "desktop-caption-heading-size": 54,
             "desktop-caption-body-text-size": 24,
             "text_position": "center",
@@ -347,7 +345,6 @@
         "image_DEJKc6": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/G39A5966.png",
             "link": "shopify://collections/collections",
             "title": "",
             "subheading": "",
@@ -360,7 +357,6 @@
         "image_EVWEjE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01500.jpg",
             "link": "shopify://collections/collections",
             "title": "",
             "subheading": "",
@@ -373,7 +369,6 @@
         "image_eNAV7n": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC02011.jpg",
             "link": "shopify://collections/hoodie",
             "title": "",
             "subheading": "",
@@ -386,7 +381,6 @@
         "image_AhFRT8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSC01236_a9d9f388-8777-4415-9da4-58e5ebe28e99.jpg",
             "link": "shopify://collections/hoodie",
             "title": "",
             "subheading": "",
