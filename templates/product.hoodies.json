@@ -40,7 +40,7 @@
             "hide_out_of_stock_variants": true,
             "variant_style": "swatches",
             "thumbnail_changes_variant": false,
-            "size_guide_page": "size-chart-for-hoodie",
+            "size_guide_page": "size-guide-1",
             "size_option_name": "Size",
             "margin_bottom": 14
           }
@@ -118,7 +118,7 @@
             "heading": "Delivery & Returns",
             "open_close_icon": "plus_minus",
             "text": "",
-            "page": "return-and-refund-policy",
+            "page": "shipping-returns-1",
             "open_by_default": false,
             "margin_bottom": 0
           }
