@@ -14,10 +14,18 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_MVefhW": {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "<strong>FREE US SHIPPING</strong>",
+            "announcement_bg_color": "#f9f9fb",
+            "announcement_text_color": "#262428"
+          }
+        },
         "00-announcement": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>FREE SHIPPING ON ALL ORDERS OVER $200 USD</strong>",
+            "announcement_text": "<strong>FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $200 USD</strong>",
             "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#000000"
           }
@@ -26,14 +34,6 @@
           "type": "announcement",
           "settings": {
             "announcement_text": "<strong>DUTIES & TAXES COVERED</strong>",
-            "announcement_bg_color": "#f9f9fb",
-            "announcement_text_color": "#262428"
-          }
-        },
-        "announcement_MVefhW": {
-          "type": "announcement",
-          "settings": {
-            "announcement_text": "<strong>FREE US SHIPPING</strong>",
             "announcement_bg_color": "#f9f9fb",
             "announcement_text_color": "#262428"
           }
@@ -49,9 +49,9 @@
         }
       },
       "block_order": [
+        "announcement_MVefhW",
         "00-announcement",
         "announcement_gBDybj",
-        "announcement_MVefhW",
         "announcement_mg6Cje"
       ],
       "settings": {
