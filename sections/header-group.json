@@ -16,10 +16,9 @@
       "blocks": {
         "announcement_MVefhW": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "announcement_text": "<strong>FREE SHIPPING ON ALL U.S ORDERS</strong>",
-            "announcement_bg_color": "#f9f9fb",
+            "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#262428"
           }
         },
