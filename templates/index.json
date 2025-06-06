@@ -15,10 +15,10 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "UP TO 70% OFF",
+            "title": "UP TO 60% OFF",
             "text": "THE ARCHIVE SALE",
             "first_button_label": "Shop now",
-            "first_button_link": "shopify://collections",
+            "first_button_link": "shopify://collections/t-shirt",
             "second_button_label": "",
             "second_button_link": "",
             "image": "shopify://shop_images/DSCF2315.jpg",
