@@ -25,6 +25,7 @@
         },
         "00-announcement": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>FREE SHIPPING ON ALL U.S ORDERS OVER $100</strong>",
             "announcement_bg_color": "#ffffff",
@@ -42,6 +43,7 @@
         },
         "announcement_mg6Cje": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>30212+ Customers Worldwide</strong>",
             "announcement_bg_color": "#ffffff",
@@ -50,6 +52,7 @@
         },
         "announcement_DLWEKG": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>THE VAULT sale - UP TO 60% OFF</strong>",
             "announcement_bg_color": "#ffffff",
