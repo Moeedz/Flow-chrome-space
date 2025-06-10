@@ -52,9 +52,9 @@
         "announcement_DLWEKG": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>THE VAULT sale - UP TO 50% OFF</strong>",
+            "announcement_text": "<strong>THE VAULT sale - UP TO 60% OFF</strong>",
             "announcement_bg_color": "#ffffff",
-            "announcement_text_color": "#262428"
+            "announcement_text_color": "#000000"
           }
         }
       },
