@@ -15,7 +15,7 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "bestsellers restock",
+            "title": "",
             "text": "we've just restocked our bestselling tees online",
             "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/t-shirt",
