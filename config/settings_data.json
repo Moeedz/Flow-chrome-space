@@ -75,7 +75,7 @@
     "pop-up-text-description-text": "<p>your first order when you sign up to become an chrome space | member<br/><br/></p>",
     "desktop-popup-style": "fullscreen",
     "pop-up-delay": 5,
-    "popup--test-mode": false,
+    "popup--test-mode": true,
     "enable_verification_popup": false,
     "verification-pop-up__test-mode": false,
     "favicon": "shopify://shop_images/xuxu_branding_favicon.png",
