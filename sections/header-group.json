@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_MVefhW": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>ready to ship | Free shipping on us order</strong>",
             "announcement_bg_color": "#ffffff",
@@ -42,6 +43,7 @@
         },
         "announcement_mg6Cje": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>41212+ Customers Worldwide</strong>",
             "announcement_bg_color": "#ffffff",
