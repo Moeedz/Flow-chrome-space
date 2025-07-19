@@ -83,7 +83,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_smart_checkout": false,
+            "show_smart_checkout": true,
             "enable_gift_card_recipient_form": true,
             "margin_bottom": 20
           }
