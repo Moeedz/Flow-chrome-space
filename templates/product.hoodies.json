@@ -45,16 +45,6 @@
             "margin_bottom": 14
           }
         },
-        "a7717974-ed85-4cde-80ef-4751178acf57": {
-          "type": "text-with-icon",
-          "disabled": true,
-          "settings": {
-            "icon": "truck",
-            "text": "Ship within 3 days",
-            "link": "",
-            "margin_bottom": 10
-          }
-        },
         "text_with_icon_nDyh43": {
           "type": "text-with-icon",
           "settings": {
@@ -86,6 +76,15 @@
             "show_smart_checkout": false,
             "enable_gift_card_recipient_form": true,
             "margin_bottom": 20
+          }
+        },
+        "a7717974-ed85-4cde-80ef-4751178acf57": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "none",
+            "text": "Free shipping",
+            "link": "",
+            "margin_bottom": 10
           }
         },
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2": {
@@ -174,10 +173,10 @@
         "price",
         "f0f0e917-92a5-4957-a68e-2d0bb38d7819",
         "options",
-        "a7717974-ed85-4cde-80ef-4751178acf57",
         "text_with_icon_nDyh43",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
         "buy_buttons",
+        "a7717974-ed85-4cde-80ef-4751178acf57",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
         "b0c19132-8e54-4664-b8ce-0a8c7f1f7737",
         "9c341458-2d2c-4317-a2cc-346e220f53e0",
