@@ -88,6 +88,15 @@
             "margin_bottom": 20
           }
         },
+        "text_with_icon_Y4KypL": {
+          "type": "text-with-icon",
+          "settings": {
+            "icon": "none",
+            "text": "Free shipping",
+            "link": "",
+            "margin_bottom": 20
+          }
+        },
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2": {
           "type": "product-description",
           "disabled": true,
@@ -178,6 +187,7 @@
         "text_with_icon_Yhbqzc",
         "2f3ddc8d-6514-403d-a884-88c9a0294300",
         "buy_buttons",
+        "text_with_icon_Y4KypL",
         "a55b9011-1b1a-4353-9d97-7bdcd60949f2",
         "b0c19132-8e54-4664-b8ce-0a8c7f1f7737",
         "9c341458-2d2c-4317-a2cc-346e220f53e0",
