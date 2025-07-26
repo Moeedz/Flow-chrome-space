@@ -16,7 +16,6 @@
       "blocks": {
         "announcement_MVefhW": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "announcement_text": "<strong>Free shipping on us order</strong>",
             "announcement_bg_color": "#ffffff",

@@ -90,6 +90,7 @@
         },
         "text_with_icon_Y4KypL": {
           "type": "text-with-icon",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "Free shipping",
