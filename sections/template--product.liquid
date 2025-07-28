@@ -443,6 +443,10 @@
                             {% endif %}
                           </div>
                         </div>
+                   {% if section.settings.show_out_of_stock_email %}
+                    {% render 'out-of-stock-form' %}
+                    <div class="shopify-disclaimer--hidden">{{ 'shopify.online_store.spam_detection.disclaimer_html' | t }}</div>
+                  {% endif %}
 
                       {%- when 'local_pickup' -%}
                         <div class="{{ spacing_classes }}" style="--custom-margin-bottom: {{ block.settings.margin_bottom }}px" {{ block.shopify_attributes }}>
@@ -655,10 +659,7 @@
 
                   {% endform %}
 
-                  {% if section.settings.show_out_of_stock_email %}
-                    {% render 'out-of-stock-form' %}
-                    <div class="shopify-disclaimer--hidden">{{ 'shopify.online_store.spam_detection.disclaimer_html' | t }}</div>
-                  {% endif %}
+                 
 
                   </div>
                 </div>
