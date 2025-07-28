@@ -422,6 +422,10 @@
                           <div class="paymentButtonsWrapper">
                             <button type="submit" data-cart-url="{{ routes.cart_url }}" aria-label="{{ 'products.product.add_to_cart' | t }}" name="add" id="AddToCart" class="btn{% if buttons_block.settings.show_smart_checkout and product.selling_plan_groups.size == 0 %} add-to-cart--secondary{% endif %}"
                               v-bind:class="{ disabled: addToCartDisabled }"
+                              {% if section.settings.show_out_of_stock_email %}
+                    {% render 'out-of-stock-form' %}
+                    <div class="shopify-disclaimer--hidden">{{ 'shopify.online_store.spam_detection.disclaimer_html' | t }}</div>
+                  {% endif %}
                               v-bind:disabled="addToCartDisabled"
                             >
                               {% assign icon_attrs = 'v-if="state === ' | append: "'adding'" | append: '" v-cloak' %}
