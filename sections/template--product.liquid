@@ -423,6 +423,7 @@
                             <button type="submit" data-cart-url="{{ routes.cart_url }}" aria-label="{{ 'products.product.add_to_cart' | t }}" name="add" id="AddToCart" class="btn{% if buttons_block.settings.show_smart_checkout and product.selling_plan_groups.size == 0 %} add-to-cart--secondary{% endif %}"
                               v-bind:class="{ disabled: addToCartDisabled }"
                               v-bind:disabled="addToCartDisabled"
+                      {% render 'out-of-stock-form' %}
                             >
                               {% assign icon_attrs = 'v-if="state === ' | append: "'adding'" | append: '" v-cloak' %}
                               {% render 'theme-icon' with icon: 'circle-notch', iconClasses: 'spin js fa-2x flex-full', iconAttributes: icon_attrs, icon_fill: settings.color_primary_button_text %}<span class="sr-only">{{ 'collections.paginate.loading' | t }}</span>
