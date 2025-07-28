@@ -301,8 +301,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".quantity-discount-wrapper-2 a {background: #f2f2f2 !important; border: 1px solid #9d9d9d !important; border-radius: var(--b-radius-4); padding: 1em !important; display: flex !important; align-items: center !important; gap: 1em !important;}",
-      ".quantity-discount-wrapper-2 svg {flex: 1 0 2em !important;}"
+      ".quantity-discount-wrapper-2 a {background: #f2f2f2 !important; border: 1px solid #9d9d9d !important; border-radius: var(--b-radius-4); padding: 1em !important; display: flex !important; align-items: center !important; gap: 1em !important;}"
     ]
   }
 }
