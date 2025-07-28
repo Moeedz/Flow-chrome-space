@@ -73,7 +73,7 @@
             "stock-range": 3,
             "show-stock-count": false,
             "stock-level-notice": "always",
-            "in-stock-message": "Ready to ship",
+            "in-stock-message": "In stock, Ready to ship",
             "low-stock-message": "Low stock",
             "out-of-stock-message": "Back in soon",
             "margin_bottom": 40
