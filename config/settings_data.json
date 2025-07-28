@@ -110,12 +110,10 @@
         "disabled": true,
         "settings": {}
       },
-      "10605408327587305396": {
-        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+      "9468172321995857178": {
+        "type": "shopify://apps/qikify-bogo-freegift/blocks/app-embed/2e94b962-8172-4839-8ad9-7837eb8b017a",
         "disabled": false,
-        "settings": {
-          "version": "v3"
-        }
+        "settings": {}
       }
     }
   },
