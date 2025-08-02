@@ -15,8 +15,8 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "Up to 60% off",
-            "text": "The Vault Is Open",
+            "title": "",
+            "text": "We've just restocked our bestselling tees.",
             "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/t-shirt",
             "second_button_label": "",
