@@ -205,7 +205,7 @@
             "mobile_image": "shopify://shop_images/CHRSPC-255_bcd3e437-487f-41d6-b8b4-6be0e498cc90.jpg",
             "mobile-caption-heading-size": 38,
             "mobile-caption-body-text-size": 14,
-            "mobile_text_position": "bottom_right",
+            "mobile_text_position": "bottom",
             "image_overlay": "#000000",
             "image_overlay_opacity": 0,
             "caption-text": "#ffffff",
