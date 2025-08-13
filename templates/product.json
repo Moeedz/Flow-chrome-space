@@ -97,10 +97,9 @@
         },
         "text_with_icon_Y4KypL": {
           "type": "text-with-icon",
-          "disabled": true,
           "settings": {
             "icon": "none",
-            "text": "Free shipping",
+            "text": "Buy 2, Get 1 Free – No Code Needed",
             "link": "",
             "margin_bottom": 20
           }
