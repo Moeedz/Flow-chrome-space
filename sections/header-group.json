@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_MVefhW": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>Free shipping on all order</strong>",
             "announcement_bg_color": "#ffffff",
@@ -51,9 +52,8 @@
         },
         "announcement_DLWEKG": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "announcement_text": "<strong>THE VAULT sale - UP TO 60% OFF</strong>",
+            "announcement_text": "<strong>Buy 2, Get 1 Free</strong> – No Code Needed",
             "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#000000"
           }
