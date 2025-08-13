@@ -15,8 +15,8 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "",
-            "text": "Buy 2, Get 1 Free – No Code Needed",
+            "title": "Buy 2, Get 1 Free – No Code Needed",
+            "text": "",
             "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/buy-two-get-one-free",
             "second_button_label": "",
@@ -28,7 +28,7 @@
             "mobile_image": "shopify://shop_images/CHRSPC-035_a79d0286-5617-4241-a02d-5f898866e8a6.jpg",
             "mobile-caption-heading-size": 16,
             "mobile-caption-body-text-size": 13,
-            "mobile_text_position": "center",
+            "mobile_text_position": "bottom",
             "image_overlay": "#000000",
             "image_overlay_opacity": 7,
             "caption-text": "#ffffff",
