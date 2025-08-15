@@ -53,7 +53,7 @@
         "announcement_DLWEKG": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>Buy 2, Get 1 Free – No Code Needed</strong>",
+            "announcement_text": "Buy 2, Get 1 Free — Add Any 3 Items to Your Cart",
             "announcement_bg_color": "#ffffff",
             "announcement_text_color": "#000000"
           }
