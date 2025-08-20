@@ -15,8 +15,8 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "UP TO 70% OFF",
-            "text": "The Vault Is Open",
+            "title": "The Vault Is Open",
+            "text": "Buy 2, Get 1 Free — Add Any 3 Items to Your Cart",
             "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/buy-two-get-one-free",
             "second_button_label": "",
