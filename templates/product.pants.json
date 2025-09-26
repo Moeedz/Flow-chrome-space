@@ -141,6 +141,7 @@
         },
         "collapsible_tab_Ya9pLA": {
           "type": "collapsible-tab",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "heading": "Product FAQs",
