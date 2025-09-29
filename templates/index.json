@@ -15,8 +15,8 @@
         "image_NDBxxR": {
           "type": "image",
           "settings": {
-            "title": "Vault Sale",
-            "text": "Buy 2, Get 1 FREE – Limited Time Only",
+            "title": "Vault Sale open",
+            "text": "",
             "first_button_label": "Shop now",
             "first_button_link": "shopify://collections/new-launchhes",
             "second_button_label": "",
