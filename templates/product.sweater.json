@@ -97,6 +97,7 @@
         },
         "text_with_icon_Y4KypL": {
           "type": "text-with-icon",
+          "disabled": true,
           "settings": {
             "icon": "none",
             "text": "Buy 2, Get 1 Free — Add Any 3 Items to Your Cart",
