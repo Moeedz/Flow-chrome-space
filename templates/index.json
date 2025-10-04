@@ -186,6 +186,35 @@
         "hover-button-background": "#000000"
       }
     },
+    "text_rich_text_wQVLHc": {
+      "type": "text--rich-text",
+      "blocks": {
+        "heading_RXcgc7": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "richtext_mYei6A": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p><strong>the fastest growing streetwear brand in U.S</strong></p>",
+            "text_size": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_RXcgc7",
+        "richtext_mYei6A"
+      ],
+      "name": "t:sections.text--rich-text.presets.name",
+      "settings": {
+        "colors": "white",
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center"
+      }
+    },
     "image_slideshow_Ay8k7H": {
       "type": "image--slideshow",
       "blocks": {
@@ -415,6 +444,7 @@
     "image_slideshow_kyt9Dz",
     "featured_collection_16_kGNKef",
     "image_image_with_text_overlay_xHLLMM",
+    "text_rich_text_wQVLHc",
     "image_slideshow_Ay8k7H",
     "featured_collection_16_gh33Ap",
     "image_gallery_q7K3eE"
