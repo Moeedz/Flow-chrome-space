@@ -438,6 +438,35 @@
         "section-width": "full",
         "content-position": "hide"
       }
+    },
+    "text_rich_text_PDzDMk": {
+      "type": "text--rich-text",
+      "blocks": {
+        "heading_eRLtMn": {
+          "type": "heading",
+          "settings": {
+            "heading": ""
+          }
+        },
+        "richtext_fwCKkw": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p><strong>The mission is simple, to build the best brand in the world.</strong></p>",
+            "text_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "heading_eRLtMn",
+        "richtext_fwCKkw"
+      ],
+      "name": "t:sections.text--rich-text.presets.name",
+      "settings": {
+        "colors": "white",
+        "section_width": "narrow",
+        "text_alignment_desktop": "center",
+        "text_alignment_mobile": "center"
+      }
     }
   },
   "order": [
@@ -447,6 +476,7 @@
     "text_rich_text_wQVLHc",
     "image_slideshow_Ay8k7H",
     "featured_collection_16_gh33Ap",
-    "image_gallery_q7K3eE"
+    "image_gallery_q7K3eE",
+    "text_rich_text_PDzDMk"
   ]
 }
