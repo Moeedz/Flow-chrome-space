@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_MVefhW": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "announcement_text": "<strong>Free Shipping on ALL US ORDERS</strong>",
             "announcement_bg_color": "#ffffff",
@@ -33,9 +34,8 @@
         },
         "announcement_gBDybj": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
-            "announcement_text": "<strong>DUTIES & TAXES COVERED</strong>",
+            "announcement_text": "<strong>Early Black Friday sale is live.</strong>",
             "announcement_bg_color": "#f9f9fb",
             "announcement_text_color": "#262428"
           }
