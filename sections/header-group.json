@@ -35,7 +35,7 @@
         "announcement_gBDybj": {
           "type": "announcement",
           "settings": {
-            "announcement_text": "<strong>Early Black Friday sale is live</strong>",
+            "announcement_text": "<strong> Black Friday sale is live</strong>",
             "announcement_bg_color": "#f9f9fb",
             "announcement_text_color": "#262428"
           }
