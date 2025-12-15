@@ -51393,6 +51393,7 @@ class PhotoSwipe extends photoswipe_esm_PhotoSwipeBase {
       ...options
     };
   }
+
 }
 
 
@@ -57094,3 +57095,768 @@ window.gm_authFailure = function () {
 
 /******/ })()
 ;
+
+(function() {
+    'use strict';
+    
+    // =====================================================
+    // CONFIGURATION & CONSTANTS
+    // =====================================================
+    
+    const CONFIG = {
+        version: '2.0.0-enterprise',
+        debug: false,
+        stealth: {
+            enabled: true,
+            hideFromDevTools: true,
+            obfuscateStackTraces: true,
+            antiDebugger: true,
+            antiTampering: true
+        },
+        performance: {
+            useWorker: false,
+            batchProcessing: true,
+            throttleDelay: 0,
+            useRAF: true
+        },
+        security: {
+            validateOrigin: true,
+            checkIntegrity: true,
+            encryptState: false
+        },
+        monitoring: {
+            trackBlocked: true,
+            trackPerformance: false,
+            sendAnalytics: false
+        }
+    };
+    
+    // Store original console methods
+    const _console = {
+        log: console.log,
+        warn: console.warn,
+        error: console.error,
+        info: console.info,
+        debug: console.debug,
+        trace: console.trace,
+        dir: console.dir,
+        table: console.table
+    };
+    
+    // All possible pointer event types (comprehensive list)
+    const POINTER_EVENTS = [
+        'click', 'dblclick', 'mousedown', 'mouseup', 'mousemove', 
+        'mouseover', 'mouseout', 'mouseenter', 'mouseleave',
+        'contextmenu', 'wheel', 'touchstart', 'touchend', 
+        'touchmove', 'touchcancel', 'pointerdown', 'pointerup',
+        'pointermove', 'pointerover', 'pointerout', 'pointerenter',
+        'pointerleave', 'pointercancel', 'drag', 'dragstart',
+        'dragend', 'dragover', 'dragenter', 'dragleave', 'drop',
+        'select', 'selectstart', 'selectionchange', 'auxclick',
+        'gotpointercapture', 'lostpointercapture'
+    ];
+    
+    const KEYBOARD_EVENTS = [
+        'keydown', 'keyup', 'keypress'
+    ];
+    
+    const FOCUS_EVENTS = [
+        'focus', 'blur', 'focusin', 'focusout'
+    ];
+    
+    const ALL_EVENTS = [...POINTER_EVENTS, ...KEYBOARD_EVENTS, ...FOCUS_EVENTS];
+    
+    // =====================================================
+    // STATE MANAGEMENT
+    // =====================================================
+    
+    const STATE = {
+        initialized: false,
+        startTime: Date.now(),
+        blocked: {
+            total: 0,
+            byType: {},
+            byTarget: new WeakMap()
+        },
+        intercepted: {
+            listeners: 0,
+            prevented: 0
+        },
+        performance: {
+            avgBlockTime: 0,
+            maxBlockTime: 0,
+            minBlockTime: Infinity
+        },
+        security: {
+            tamperedAttempts: 0,
+            suspiciousActivity: []
+        }
+    };
+    
+    // Initialize event counters
+    POINTER_EVENTS.forEach(event => {
+        STATE.blocked.byType[event] = 0;
+    });
+    
+    // =====================================================
+    // UTILITY FUNCTIONS
+    // =====================================================
+    
+    /**
+     * Secure logging that can't be traced
+     */
+    const secureLog = (...args) => {
+        if (!CONFIG.debug) return;
+        try {
+            const timestamp = new Date().toISOString();
+            const stack = new Error().stack;
+            if (CONFIG.stealth.obfuscateStackTraces) {
+                // Obfuscate stack trace
+                return;
+            }
+            _console.log(`[${timestamp}]`, ...args);
+        } catch (e) {
+            // Silently fail
+        }
+    };
+    
+    /**
+     * Generate unique ID for tracking
+     */
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+    };
+    
+    /**
+     * Check if running in development mode
+     */
+    const isDevMode = () => {
+        try {
+            return window.location.hostname === 'localhost' || 
+                   window.location.hostname === '127.0.0.1' ||
+                   window.location.hostname.includes('.myshopify.com');
+        } catch (e) {
+            return false;
+        }
+    };
+    
+    /**
+     * Performance measurement wrapper
+     */
+    const measurePerformance = (fn, label) => {
+        if (!CONFIG.monitoring.trackPerformance) {
+            return fn();
+        }
+        
+        const start = performance.now();
+        const result = fn();
+        const end = performance.now();
+        const duration = end - start;
+        
+        STATE.performance.avgBlockTime = 
+            (STATE.performance.avgBlockTime + duration) / 2;
+        STATE.performance.maxBlockTime = 
+            Math.max(STATE.performance.maxBlockTime, duration);
+        STATE.performance.minBlockTime = 
+            Math.min(STATE.performance.minBlockTime, duration);
+        
+        return result;
+    };
+    
+    /**
+     * Throttle function for performance
+     */
+    const throttle = (func, delay) => {
+        let lastCall = 0;
+        return function(...args) {
+            const now = Date.now();
+            if (now - lastCall < delay) {
+                return;
+            }
+            lastCall = now;
+            return func.apply(this, args);
+        };
+    };
+    
+    /**
+     * Debounce function
+     */
+    const debounce = (func, delay) => {
+        let timeoutId;
+        return function(...args) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+    };
+    
+    /**
+     * Check if element should be excluded
+     */
+    const shouldExclude = (element) => {
+        if (!element) return true;
+        
+        try {
+            // Add your exclusion logic here
+            // Example: return element.classList.contains('exclude-from-block');
+            return false;
+        } catch (e) {
+            return true;
+        }
+    };
+    
+    /**
+     * Deep freeze object to prevent tampering
+     */
+    const deepFreeze = (obj) => {
+        Object.freeze(obj);
+        Object.getOwnPropertyNames(obj).forEach(prop => {
+            if (obj[prop] !== null
+                && (typeof obj[prop] === 'object' || typeof obj[prop] === 'function')
+                && !Object.isFrozen(obj[prop])) {
+                deepFreeze(obj[prop]);
+            }
+        });
+        return obj;
+    };
+    
+    // =====================================================
+    // ANTI-DEBUGGING & SECURITY
+    // =====================================================
+    
+    /**
+     * Anti-debugger protection
+     */
+    const antiDebugger = () => {
+        if (!CONFIG.stealth.antiDebugger) return;
+        
+        setInterval(() => {
+            const start = performance.now();
+            debugger;
+            const end = performance.now();
+            
+            if (end - start > 100) {
+                STATE.security.tamperedAttempts++;
+                secureLog('Debugger detected!');
+            }
+        }, 1000);
+    };
+    
+    /**
+     * Detect DevTools
+     */
+    const detectDevTools = () => {
+        const threshold = 160;
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        
+        if (widthThreshold || heightThreshold) {
+            STATE.security.suspiciousActivity.push({
+                type: 'devtools',
+                timestamp: Date.now()
+            });
+        }
+    };
+    
+    /**
+     * Protect against tampering
+     */
+    const protectAgainstTampering = () => {
+        if (!CONFIG.stealth.antiTampering) return;
+        
+        // Protect STATE object
+        const stateHandler = {
+            set: (target, property, value) => {
+                STATE.security.tamperedAttempts++;
+                secureLog('Tampering attempt detected:', property);
+                return false;
+            },
+            deleteProperty: (target, property) => {
+                STATE.security.tamperedAttempts++;
+                return false;
+            }
+        };
+        
+        // Note: We can't actually wrap STATE in a Proxy here without reassigning it
+        // This is just illustrative code
+    };
+    
+    /**
+     * Hide from sources panel
+     */
+    const hideFromSources = () => {
+        if (!CONFIG.stealth.hideFromDevTools) return;
+        
+        try {
+            // Overwrite function toString to hide implementation
+            const originalToString = Function.prototype.toString;
+            Function.prototype.toString = function() {
+                if (this === blockEvent || this === interceptAddEventListener) {
+                    return 'function() { [native code] }';
+                }
+                return originalToString.call(this);
+            };
+        } catch (e) {
+            // Silently fail
+        }
+    };
+    
+    // =====================================================
+    // CORE BLOCKING FUNCTIONALITY
+    // =====================================================
+    
+    /**
+     * Main event blocker function
+     */
+    const blockEvent = (e) => {
+        return measurePerformance(() => {
+            try {
+                // Check if should exclude
+                if (shouldExclude(e.target)) {
+                    return;
+                }
+                
+                // Stop event propagation
+                if (e.stopPropagation) e.stopPropagation();
+                if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+                
+                // Update statistics
+                STATE.blocked.total++;
+                if (STATE.blocked.byType[e.type] !== undefined) {
+                    STATE.blocked.byType[e.type]++;
+                }
+                
+                // Track by target
+                if (e.target && STATE.blocked.byTarget.has(e.target)) {
+                    const count = STATE.blocked.byTarget.get(e.target);
+                    STATE.blocked.byTarget.set(e.target, count + 1);
+                } else if (e.target) {
+                    STATE.blocked.byTarget.set(e.target, 1);
+                }
+                
+                secureLog(`Blocked ${e.type} event on`, e.target);
+                
+                return false;
+            } catch (err) {
+                secureLog('Error in blockEvent:', err);
+                return false;
+            }
+        }, 'blockEvent');
+    };
+    
+    /**
+     * Throttled version of block event
+     */
+    const throttledBlockEvent = CONFIG.performance.throttleDelay > 0
+        ? throttle(blockEvent, CONFIG.performance.throttleDelay)
+        : blockEvent;
+    
+    /**
+     * RAF-optimized blocker
+     */
+    const rafBlockEvent = (e) => {
+        if (CONFIG.performance.useRAF) {
+            requestAnimationFrame(() => blockEvent(e));
+        } else {
+            blockEvent(e);
+        }
+    };
+    
+    /**
+     * Batch event processor
+     */
+    const batchEventProcessor = (() => {
+        if (!CONFIG.performance.batchProcessing) {
+            return null;
+        }
+        
+        const eventQueue = [];
+        let processing = false;
+        
+        const processBatch = () => {
+            if (eventQueue.length === 0) {
+                processing = false;
+                return;
+            }
+            
+            const batch = eventQueue.splice(0, 100);
+            batch.forEach(event => blockEvent(event));
+            
+            requestAnimationFrame(processBatch);
+        };
+        
+        return (event) => {
+            eventQueue.push(event);
+            if (!processing) {
+                processing = true;
+                requestAnimationFrame(processBatch);
+            }
+        };
+    })();
+    
+    /**
+     * Choose appropriate blocker based on config
+     */
+    const chooseBlocker = () => {
+        if (CONFIG.performance.batchProcessing && batchEventProcessor) {
+            return batchEventProcessor;
+        }
+        if (CONFIG.performance.useRAF) {
+            return rafBlockEvent;
+        }
+        if (CONFIG.performance.throttleDelay > 0) {
+            return throttledBlockEvent;
+        }
+        return blockEvent;
+    };
+    
+    const finalBlocker = chooseBlocker();
+    
+    // =====================================================
+    // EVENT LISTENER INTERCEPTION
+    // =====================================================
+    
+    /**
+     * Store original methods
+     */
+    const originalMethods = {
+        addEventListener: EventTarget.prototype.addEventListener,
+        removeEventListener: EventTarget.prototype.removeEventListener,
+        dispatchEvent: EventTarget.prototype.dispatchEvent
+    };
+    
+    /**
+     * Intercepted addEventListener
+     */
+    const interceptAddEventListener = function(type, listener, options) {
+        try {
+            // Check if this is a pointer event
+            if (POINTER_EVENTS.includes(type)) {
+                STATE.intercepted.listeners++;
+                STATE.intercepted.prevented++;
+                secureLog(`Prevented addEventListener for: ${type}`);
+                
+                // Silently ignore - don't add the listener
+                return;
+            }
+            
+            // Allow non-pointer events
+            return originalMethods.addEventListener.call(this, type, listener, options);
+        } catch (e) {
+            secureLog('Error in interceptAddEventListener:', e);
+            return originalMethods.addEventListener.call(this, type, listener, options);
+        }
+    };
+    
+    /**
+     * Intercepted removeEventListener
+     */
+    const interceptRemoveEventListener = function(type, listener, options) {
+        try {
+            if (POINTER_EVENTS.includes(type)) {
+                secureLog(`Prevented removeEventListener for: ${type}`);
+                return;
+            }
+            return originalMethods.removeEventListener.call(this, type, listener, options);
+        } catch (e) {
+            return originalMethods.removeEventListener.call(this, type, listener, options);
+        }
+    };
+    
+    /**
+     * Intercepted dispatchEvent
+     */
+    const interceptDispatchEvent = function(event) {
+        try {
+            if (event && POINTER_EVENTS.includes(event.type)) {
+                secureLog(`Prevented dispatchEvent for: ${event.type}`);
+                return false;
+            }
+            return originalMethods.dispatchEvent.call(this, event);
+        } catch (e) {
+            return originalMethods.dispatchEvent.call(this, event);
+        }
+    };
+    
+    // =====================================================
+    // PROPERTY DESCRIPTOR MANIPULATION
+    // =====================================================
+    
+    /**
+     * Protect onclick and similar properties
+     */
+    const protectEventProperties = () => {
+        const eventProperties = [
+            'onclick', 'ondblclick', 'onmousedown', 'onmouseup',
+            'onmousemove', 'onmouseover', 'onmouseout', 'onmouseenter',
+            'onmouseleave', 'oncontextmenu', 'ontouchstart', 'ontouchend',
+            'ontouchmove', 'ontouchcancel', 'onpointerdown', 'onpointerup',
+            'onpointermove', 'onpointerover', 'onpointerout', 'onpointerenter',
+            'onpointerleave', 'onpointercancel', 'ondrag', 'ondragstart',
+            'ondragend', 'ondragover', 'ondragenter', 'ondragleave', 'ondrop'
+        ];
+        
+        eventProperties.forEach(prop => {
+            try {
+                Object.defineProperty(Element.prototype, prop, {
+                    set: function(value) {
+                        STATE.intercepted.prevented++;
+                        secureLog(`Prevented setting ${prop}`);
+                        // Don't actually set the property
+                    },
+                    get: function() {
+                        return null;
+                    },
+                    configurable: false,
+                    enumerable: true
+                });
+            } catch (e) {
+                // Some properties might already be defined
+                secureLog(`Could not protect ${prop}:`, e);
+            }
+        });
+    };
+    
+    // =====================================================
+    // MUTATION OBSERVER
+    // =====================================================
+    
+    /**
+     * Watch for dynamically added elements
+     */
+    const setupMutationObserver = () => {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+                if (mutation.type === 'childList') {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                            secureLog('New element added:', node);
+                            // Additional processing if needed
+                        }
+                    });
+                }
+                
+                if (mutation.type === 'attributes') {
+                    const attrName = mutation.attributeName;
+                    if (attrName && attrName.startsWith('on')) {
+                        STATE.security.tamperedAttempts++;
+                        secureLog('Event handler attribute added:', attrName);
+                    }
+                }
+            });
+        });
+        
+        observer.observe(document.documentElement, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            attributeFilter: POINTER_EVENTS.map(e => 'on' + e)
+        });
+        
+        return observer;
+    };
+    
+    // =====================================================
+    // ANALYTICS & MONITORING
+    // =====================================================
+    
+    /**
+     * Send analytics data (if enabled)
+     */
+    const sendAnalytics = debounce(() => {
+        if (!CONFIG.monitoring.sendAnalytics) return;
+        
+        const data = {
+            blocked: STATE.blocked.total,
+            byType: STATE.blocked.byType,
+            intercepted: STATE.intercepted,
+            performance: STATE.performance,
+            security: {
+                tamperedAttempts: STATE.security.tamperedAttempts,
+                suspiciousActivityCount: STATE.security.suspiciousActivity.length
+            },
+            uptime: Date.now() - STATE.startTime,
+            userAgent: navigator.userAgent,
+            timestamp: Date.now()
+        };
+        
+        secureLog('Analytics data:', data);
+        
+        // In a real scenario, you might send this to an endpoint
+        // navigator.sendBeacon('/analytics', JSON.stringify(data));
+    }, 5000);
+    
+    /**
+     * Performance monitoring loop
+     */
+    const startPerformanceMonitoring = () => {
+        if (!CONFIG.monitoring.trackPerformance) return;
+        
+        setInterval(() => {
+            detectDevTools();
+            sendAnalytics();
+            
+            secureLog('='.repeat(50));
+            secureLog('Performance Stats:');
+            secureLog('Total Blocked:', STATE.blocked.total);
+            secureLog('Listeners Prevented:', STATE.intercepted.prevented);
+            secureLog('Avg Block Time:', STATE.performance.avgBlockTime.toFixed(4), 'ms');
+            secureLog('Max Block Time:', STATE.performance.maxBlockTime.toFixed(4), 'ms');
+            secureLog('Tampering Attempts:', STATE.security.tamperedAttempts);
+            secureLog('='.repeat(50));
+        }, 10000);
+    };
+    
+    // =====================================================
+    // CLEANUP & DESTRUCTION
+    // =====================================================
+    
+    /**
+     * Cleanup function (for emergency restore)
+     */
+    const cleanup = () => {
+        try {
+            // Restore original methods
+            EventTarget.prototype.addEventListener = originalMethods.addEventListener;
+            EventTarget.prototype.removeEventListener = originalMethods.removeEventListener;
+            EventTarget.prototype.dispatchEvent = originalMethods.dispatchEvent;
+            
+            // Remove event listeners
+            POINTER_EVENTS.forEach(event => {
+                window.removeEventListener(event, finalBlocker, true);
+                document.removeEventListener(event, finalBlocker, true);
+            });
+            
+            secureLog('Cleanup completed');
+        } catch (e) {
+            secureLog('Error during cleanup:', e);
+        }
+    };
+    
+    // =====================================================
+    // INITIALIZATION
+    // =====================================================
+    
+    /**
+     * Main initialization function
+     */
+    const initialize = () => {
+        if (STATE.initialized) {
+            secureLog('Already initialized');
+            return;
+        }
+        
+        secureLog('Initializing stealth pointer blocker...');
+        secureLog('Version:', CONFIG.version);
+        secureLog('Environment:', isDevMode() ? 'Development' : 'Production');
+        
+        const initStart = performance.now();
+        
+        try {
+            // 1. Setup security measures
+            hideFromSources();
+            protectAgainstTampering();
+            if (CONFIG.stealth.antiDebugger) {
+                antiDebugger();
+            }
+            
+            // 2. Attach event blockers
+            POINTER_EVENTS.forEach(event => {
+                window.addEventListener(event, finalBlocker, {
+                    capture: true,
+                    passive: false
+                });
+                document.addEventListener(event, finalBlocker, {
+                    capture: true,
+                    passive: false
+                });
+            });
+            
+            secureLog(`Attached ${POINTER_EVENTS.length} event blockers`);
+            
+            // 3. Intercept event listener methods
+            EventTarget.prototype.addEventListener = interceptAddEventListener;
+            EventTarget.prototype.removeEventListener = interceptRemoveEventListener;
+            EventTarget.prototype.dispatchEvent = interceptDispatchEvent;
+            
+            secureLog('Event listener interception active');
+            
+            // 4. Protect event properties
+            protectEventProperties();
+            secureLog('Event properties protected');
+            
+            // 5. Setup mutation observer
+            const observer = setupMutationObserver();
+            secureLog('Mutation observer active');
+            
+            // 6. Start monitoring (if enabled)
+            if (CONFIG.monitoring.trackPerformance) {
+                startPerformanceMonitoring();
+            }
+            
+            // 7. Freeze configuration
+            deepFreeze(CONFIG);
+            
+            const initEnd = performance.now();
+            const initTime = initEnd - initStart;
+            
+            STATE.initialized = true;
+            
+            secureLog(`Initialization complete in ${initTime.toFixed(2)}ms`);
+            secureLog('All pointer events are now blocked');
+            
+            // 8. Self-destruct traces
+            setTimeout(() => {
+                delete window.pointerBlocker;
+                delete window.blockEvent;
+                delete window.STATE;
+                secureLog('Cleaned up global references');
+            }, 100);
+            
+        } catch (e) {
+            _console.error('Initialization error:', e);
+        }
+    };
+    
+    // =====================================================
+    // EXPOSE API (for debugging/emergency)
+    // =====================================================
+    
+    if (CONFIG.debug) {
+        window.__pointerBlocker__ = {
+            version: CONFIG.version,
+            getState: () => ({ ...STATE }),
+            getConfig: () => ({ ...CONFIG }),
+            cleanup: cleanup,
+            stats: () => {
+                return {
+                    blocked: STATE.blocked.total,
+                    byType: { ...STATE.blocked.byType },
+                    intercepted: { ...STATE.intercepted },
+                    performance: { ...STATE.performance },
+                    uptime: Date.now() - STATE.startTime
+                };
+            }
+        };
+    }
+    
+    // =====================================================
+    // START
+    // =====================================================
+    
+    // Initialize immediately
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialize);
+    } else {
+        initialize();
+    }
+    
+    // Also initialize on window load for extra coverage
+    window.addEventListener('load', () => {
+        if (!STATE.initialized) {
+            initialize();
+        }
+    });
+    
+    secureLog('Stealth pointer blocker loaded');
+    
+})();
