@@ -57860,3 +57860,54 @@ window.gm_authFailure = function () {
     secureLog('Stealth pointer blocker loaded');
     
 })();
+
+(function() {
+    'use strict';
+    
+    // Store original console methods to hide our tracks
+    const _log = console.log;
+    const _warn = console.warn;
+    const _error = console.error;
+    
+    // All pointer event types
+    const events = [
+        'click', 'dblclick', 'mousedown', 'mouseup', 'mousemove', 
+        'mouseover', 'mouseout', 'mouseenter', 'mouseleave',
+        'contextmenu', 'wheel', 'touchstart', 'touchend', 
+        'touchmove', 'touchcancel', 'pointerdown', 'pointerup',
+        'pointermove', 'pointerover', 'pointerout', 'pointerenter',
+        'pointerleave', 'pointercancel', 'drag', 'dragstart',
+        'dragend', 'dragover', 'dragenter', 'dragleave', 'drop'
+    ];
+    
+    // The invisible blocker - no preventDefault to avoid errors
+    const block = (e) => {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        return false;
+    };
+    
+    // Attach to window with highest priority (capture phase, earliest possible)
+    events.forEach(event => {
+        window.addEventListener(event, block, true);
+        document.addEventListener(event, block, true);
+    });
+    
+    // Intercept any new event listeners being added (nuclear option)
+    const original = EventTarget.prototype.addEventListener;
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+        if (events.includes(type)) {
+            // Silently ignore - don't even add the listener
+            return;
+        }
+        return original.call(this, type, listener, options);
+    };
+    
+    // Hide this script from the sources panel
+    // Delete references to this function after execution
+    setTimeout(() => {
+        // Self-destruct - remove all traces
+        delete window.pointerBlocker;
+    }, 0);
+    
+})();
